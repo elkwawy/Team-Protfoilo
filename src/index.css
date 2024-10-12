@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   --main-color: #68bbff;
   --hover-main-color: #51a8ff;
@@ -46,13 +47,36 @@ a {
   width: 86%;
 }
 
+
+::placeholder{
+  color:black !important;
+
 .trans { 
     transition: all;
     transition-duration: 0.3s;
+
 }
 .myD {
   margin: 60px 0;
 }
+
+
+.scaled{
+  animation: scale 0.8s infinite;
+  transition: all 0.5s;
+}
+
+
+@keyframes scale{
+  from{
+    scale: 0.8;
+  }
+  to{
+    scale: 1;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .containerD {
     width: 90%;
