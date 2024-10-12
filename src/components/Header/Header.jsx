@@ -14,7 +14,7 @@ const Header = () => {
     { name: t("navLi2"), link: "/services" },
     { name: t("navLi3"), link: "/steps" },
     { name: t("navLi4"), link: "/ourWork" },
-    { name: t("navLi5"), link: "/aboutUs" },
+    { name: t("navLi5"), link: "/aboutUS" },
   ];
 
   const [isServices, setIsServices] = useState(false);

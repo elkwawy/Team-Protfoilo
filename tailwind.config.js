@@ -10,7 +10,7 @@ export default {
         "color-white": "var(--color-white)",
         "frist-color": "var(--frist-color)",
         "thrid-color": "var(--thrid-color)",
-        "secound-color": "var(--secound-color)"
+        "secound-color": "var(--secound-color)",
       },
     },
   },
