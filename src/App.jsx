@@ -8,11 +8,12 @@ import LoadingSpinner from "./utils/LoadingSpinner";
 const UiUxService = React.lazy(() => import('./pages/UiUxService'));
 const WebService = React.lazy(() => import('./pages/WebService'));
 const MobileService = React.lazy(() => import('./pages/MobileService'));
-import Layout from "./components/layout/Layout";
-import About from "./pages/about/about";
+
+import About from "./pages/about/About";
 import Steps from "./pages/steps/Steps";
 import Ourwork from "./pages/ourwork/Ourwork";
-import ContactUs from "./pages/contactUs/ContactUs";
+import ContactUs from "./pages/contactUs/ContactUs"; 
+
 
 import DailyOffer from "./components/DailyOffer";
 import TeamD from "./components/TeamDC";
