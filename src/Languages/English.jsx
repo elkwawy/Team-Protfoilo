@@ -23,6 +23,61 @@ export const English = {
   footerT1: "Website parts",
   footerT2: "Services",
   footerT3: "Contact Us",
+  // home page
+  //heroSec 
+  heroMainTitle: "Bring your dream project to life with our expert help in web and app Dev.",
+  heroMainText: "In a competitive market, digital excellence sets leaders apart. Our customized website and application development solutions focus on achieving your goals and ensuring sustainable digital growth.",
+  heroMainButton1: "Show services",
+  heroMainButton2: "Contact us",
+  // ourServices
+  ourHomeServicesTitle: "Our services",
+  ourHomeServicesText: "Venture into the complex world of technology and gain the trust of your users.",
+  ourHomeServicesUiuxTitle: "UI/UX",
+  ourHomeServicesUiuxText: "We have creative designers who can elevate your project and build attractive designs that enhance customer trust.",
+  ourHomeServicesUiuxLink: "More details",
+  ourHomeServicesWebTitle: "Web development",
+  ourHomeServicesWebText: "Without a professionally built website, you remain invisible. We guarantee a high-quality site developed by experts.",
+  ourHomeServicesWebLink: "More details",
+  ourHomeServicesMobileTitle: "Mobile development",
+  ourHomeServicesMobileText: "Our highly experienced developers from Egypt specialize in building Android and iOS mobile applications.",
+  ourHomeServicesMobileLink: "More details",
+  // how do we work
+  stepsHomeMainTitle: "What are our steps?",
+  stepsHomeMainText: "This is simply what we do:",
+  stepsHomeFirstTitle: "Contact us",
+  stepsHomeFirstText: 'Send us an email with the service title, such as website development or mobile app development, and a meeting will be scheduled at a convenient time for you and the team to discuss your project details and the delivery timeline.',
+  stepsHomeSecondTitle: 'UI/UX',
+  stepsHomeSecondText: "After fully understanding your project and studying your target users, we work on creating a smooth user experience, flow diagrams, and prototype designs. Then, we develop a comfortable and attractive user interface using Figma and Adobe XD.",
+  stepsHomeThirdTitle: "Development",
+  stepsHomeThirdText: 'Developers convert your designs into web pages or app screens using HTML5, CSS3, JavaScript, or React. They test the interface on all browsers and screens for efficiency, while the backend team handles databases and servers using NodeJS.',
+  number1: "1",
+  number2: '2',
+  number3: '3',
+  // Testmonials
+  testimonialsHomeTitle: "What our customers say about us?",
+  testimonialsHomeText: 'Let us take part in your success',
+  customer1name: "Ahmed Mohammed - Advanced Tech",
+  customer2name: "Sarah Khaled - Digital Vision",
+  customer3name: "Ali Youssef - Smart World",
+  customer4name: "Noor Ibrahim - Software Innovations",
+  customer5name: "Layla Hassan - Integrated Systems",
+  customer6name: "Youssef Abdullah - Future Solutions",
+  customer7name: "Maryam Abdulrahman - Creative Touch",
+  customer8name: "Khaled Suleiman - Business Network",
+  customer9name: "Fatima Omar - Progressive Ideas",
+  testimonialsHomeCustomer1: "Outstanding service! They took our vision and turned it into a stunning website that exceeded our expectations. The user experience is seamless, and the design is top-notch!",
+  testimonialsHomeCustomer2: "Their team developed a flawless mobile app for us. The design is intuitive, and the app works perfectly across all devices. We couldn't be happier with the results!",
+  testimonialsHomeCustomer3: "We came to them with an idea, and they brought it to life with creative design and professional development. Our website is now both functional and visually appealing!",
+  testimonialsHomeCustomer4: "The attention to detail in the UI/UX design was impressive. They crafted a beautiful and user-friendly interface that has greatly improved our customers' experience.",
+  testimonialsHomeCustomer5: "Dot Code took the time to understand our vision and delivered a beautiful, user-friendly website and mobile app. Their attention to detail in both the design and development stages was impressive. We were kept in the loop throughout the process, and the end result exceeded our expectations!",
+  testimonialsHomeCustomer6: "From the first meeting to the final delivery, they were highly professional and responsive. Our app runs smoothly, and the design looks fantastic!",
+  testimonialsHomeCustomer7: "We needed a custom-built app for our business, and they delivered exactly what we envisioned. The collaboration was easy, and the final product was amazing!",
+  testimonialsHomeCustomer8: "Our experience with their web development services was exceptional. They understood our business needs and created a website that reflects our brand perfectly.",
+  testimonialsHomeCustomer9: "Our experience with their web development services was exceptional. They understood our business needs and created a website that reflects our brand perfectly.",
+  //creative section
+  creativeHomeSectionTitle: "Creativity is not the only secret!",
+  creativeHomeSectionText: "Our creativity and innovation are the foundation of your project's success and dominance in the market. But that's not all. After taking the first steps together, to reach the top, we must build a strong partnership to maintain constant communication and ensure your project's stability and digital excellence, always and forever. You’ll find all of this only at",
+  creativeHomeSectionLink: 'Show more',
 
 
   // About Us
@@ -157,7 +212,7 @@ locationDesc: "Cairo, Egypt",
   // service projects
   serviceProjectsTitle: "Our successful projects that showcase our",
   // whyWe Section
-  whyWeTitle: "Why choose us?"
+  whyWeTitle: "Why choose us?",
   
 
   // DailyOffer

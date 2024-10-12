@@ -48,13 +48,18 @@ a {
 }
 
 
+
 ::placeholder{
   color:black !important;
+}
 
 .trans { 
     transition: all;
     transition-duration: 0.3s;
 
+}
+.arrowsEn {
+  transform: rotateX(180deg);
 }
 .myD {
   margin: 60px 0;
