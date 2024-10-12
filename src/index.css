@@ -45,6 +45,11 @@ a {
   margin: 0 auto;
   width: 86%;
 }
+
+.trans { 
+    transition: all;
+    transition-duration: 0.3s;
+}
 .myD {
   margin: 60px 0;
 }
