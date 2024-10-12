@@ -72,7 +72,7 @@ export const Arabic = {
   // service projects
   serviceProjectsTitle: "أعمالنا الناجحة التي تحكي عن",
   // whyWe Section
-  whyWeTitle: "لماذا تختارنا نحن؟"
+  whyWeTitle: "لماذا تختارنا نحن؟",
   
   // DailyOffer
   dO_h1: "لا تتردد، انضم إلينا واطلب عرضك اليومي الآن!",

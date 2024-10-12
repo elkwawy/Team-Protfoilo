@@ -11,7 +11,7 @@ const Header = () => {
   const { t } = useTranslation();
   let ul = [
     { name: t("navLi1"), link: "/" },
-    { name: t("navLi2"), link: "/services" },
+    { name: t("navLi2"),  },
     { name: t("navLi3"), link: "/steps" },
     { name: t("navLi4"), link: "/ourWork" },
     { name: t("navLi5"), link: "/aboutUs" },
