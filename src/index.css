@@ -4,6 +4,9 @@
 :root {
   --main-color: #68bbff;
   --hover-main-color: #51a8ff;
+  --frist-color: #3995ff;
+  --thrid-color: #449eff;
+  --secound-color: #5db2ff;
   --color-black: #222222;
   --color-white: #ffffff;
 }
@@ -26,7 +29,7 @@ ul {
   width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #222222;
+  background-color: var(--hover-main-color);
 }
 ::-webkit-scrollbar-track {
   background-color: lightgray;
@@ -42,29 +45,11 @@ a {
   margin: 0 auto;
   width: 86%;
 }
+.myD {
+  margin: 60px 0;
+}
 @media (max-width: 1024px) {
   .containerD {
     width: 90%;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: rotate(-45deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  to {
-    opacity: 0;
-    transform: rotate(45deg);
   }
 }
