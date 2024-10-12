@@ -13,6 +13,7 @@ import About from "./pages/about/About";
 import Steps from "./pages/steps/Steps";
 import Ourwork from "./pages/ourwork/Ourwork";
 import ContactUs from "./pages/contactUs/ContactUs"; 
+import Home from "./pages/Home";
 
 
 import DailyOffer from "./components/DailyOffer";
@@ -24,6 +25,7 @@ function App() {
       <Header />
       <Suspense fallback={<div className="w-full h-[calc(100vh-72px)] flex items-center justify-center"><LoadingSpinner /></div>}>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/services/uiux_services" element={<UiUxService />} />
           <Route path="/services/web_services" element={<WebService />} />
           <Route path="/services/mobile_app_services" element={<MobileService />} />
