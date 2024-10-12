@@ -9,12 +9,13 @@ const UiUxService = React.lazy(() => import('./pages/UiUxService'));
 const WebService = React.lazy(() => import('./pages/WebService'));
 const MobileService = React.lazy(() => import('./pages/MobileService'));
 
+import DailyOffer from "./components/DailyOffer";
+import TeamD from "./components/TeamDC";
 function App() {
   const { t } = useTranslation();
   return (
     <div className="App">
       <Header />
-      {/* <h1 className="text-3xl text-blue-500 text-center mt-5 h-[37vh]">{t("test")}</h1> */}
       <Suspense fallback={<div className="w-full h-[calc(100vh-72px)] flex items-center justify-center"><LoadingSpinner /></div>}>
         <Routes>
           <Route path="/services/uiux_services" element={<UiUxService />} />
@@ -22,6 +23,8 @@ function App() {
           <Route path="/services/mobile_app_services" element={<MobileService />} />
         </Routes>
       </Suspense>
+      <TeamD />
+      <DailyOffer />
       <Footer />
     </div>
   );

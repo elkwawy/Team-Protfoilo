@@ -1,3 +1,5 @@
+import { t } from "i18next";
+
 export const English = {
   test: "Hello Ahmed",
   // Header
@@ -21,6 +23,7 @@ export const English = {
   footerT1: "Website parts",
   footerT2: "Services",
   footerT3: "Contact Us",
+
   // Ui Ux service
   uiuxHeroTitle: 'User interface design and user experience.',
   uiuxHeroText: "We create experiences that immerse users in a welcoming environment, promoting engagement and return visits. Our designs go beyond appearance, strengthening the connection between your product and users by blending beauty and functionality. We aim for more than just enhancing your interface!",
@@ -73,4 +76,23 @@ export const English = {
   // whyWe Section
   whyWeTitle: "Why choose us?"
   
+
+  // DailyOffer
+  dO_h1: "Don't hesitate, join us and order your daily offer now!",
+  dO_p: "When you place your order through the site, you will receive a special offer for you",
+  dO_btn: "Contact Us",
+  // teamMembers
+  teamTitle: "Our creative team",
+  teamDesc: "We strive to apply your ideas creatively to enhance your brand identity on the ground.",
+  FED1: "Ahmed Elkwawy",
+  FED2: "Mahmoud Amin",
+  FED3: "Amir Muslim",
+  FED4: "Aya Farh",
+  BED1: "Ahmed Magdy",
+  BED2: "Rahma Atef",
+  FLD1: "Ahmed Ayman",
+  UiUxD1: "Ola Ashraf",
+  UiUxD2: "Nada Abdelrazek",
+  PM: "Mohammed Elshahaby",
+
 };
