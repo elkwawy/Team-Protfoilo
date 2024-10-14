@@ -53,32 +53,34 @@ export default function About() {
   return (
     <>
       <section className='myD'>
-        <div className='containerD '>
+        <div className='containerD'>
           <h2 className='text-3xl'>{t("aboutHidding1")}</h2>
           <h3 className='text-2xl my-2'>
             {t("aboutHidding2")} <span className='text-main-color'>{t("aboutHidding3")}</span>
           </h3>
           <p className='mb-6'>
-            {t("aboutDes1")}  <span className='text-[#EA5212]'>{t("aboutDes2")}</span>
+            {t("aboutDes1")}  <span className='text-main-color'>{t("aboutDes2")}</span>
           </p>
         </div>
 
         <div className='rounded-xl overflow-hidden containerD'>
           <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            className='w-full'
+            src="assets\images\aboutUs\marvin-meyer-SYTO3xs06fU-unsplash (1).jpg"
+            className='w-full max-h-[500px] object-cover'
             alt=''
           />
         </div>
 
         <div className='containerD '>
-          <h3 className='text-4xl font-bold my-6 mt-10'>{t("whotitl")}</h3>
-          <div className='text-gray-500 mb-10'>
+        <div className='myD'>
+        <h3 className='text-4xl font-bold'>{t("whotitl")}</h3>
+          <div className='text-gray-500 '>
             <p className='my-4 '>{t("whoDes1")}</p>
             <p className='mb-4'>{t("whoDes2")}</p>
             <p className='mb-4'>{t("whoDes3")}</p>
             <p className='mb-4'>{t("whoDes4")}</p>
           </div>
+        </div>
         </div>
 
         <div className='bg-gradient-to-l from-blue-300 to-blue-500 py-10 '>
@@ -158,7 +160,7 @@ export default function About() {
         </div>
 
         <div className='containerD'>
-          <div className='my-10 grid grid-cols-12 gap-4'>
+          <div className='myD grid grid-cols-12 gap-4'>
             <div className='col-span-12 md:col-span-8'>
               <h3 className='text-3xl font-bold mb-4'>{t("knowUsTitle")}</h3>
               <p className='mb-4'>{t("knowUsP1")}</p>

@@ -300,9 +300,9 @@ export const English = {
   contactLocation: "Your Location",
 
   servicetitl: "Talk to Customer Service",
-  contactPhoneDesc: "01012345677",
+  contactPhoneDesc: "01147290516",
   whatsupnum: "WhatsApp",
-  emailDesc: "code@gmail.com",
+  emailDesc: "dotcode16@gmail.com",
   locationtile: "Location",
   locationDesc: "Cairo, Egypt",
 };
