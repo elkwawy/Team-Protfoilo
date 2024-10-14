@@ -7,10 +7,10 @@ const TeamDC = () => {
   return (
     <div className="">
       <div className="containerD mx-auto">
-        <h1 className=" text-4xl font-extrabold mb-5 text-gray-900">
+        <h1 className=" text-4xl text-center font-extrabold mb-5 text-gray-900">
           {t("teamTitle")}
         </h1>
-        <p className=" text-lg mb-7 text-gray-700 leading-relaxed">
+        <p className=" text-lg text-center mb-7 text-gray-700 leading-relaxed">
           {t("teamDesc")}
         </p>
         <div className="grid grid-cols-1 min-[490px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

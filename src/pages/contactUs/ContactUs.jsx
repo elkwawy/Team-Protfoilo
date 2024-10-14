@@ -1,117 +1,200 @@
-import { t } from 'i18next'
-import React from 'react'
-import { FaPhone, FaWhatsapp } from 'react-icons/fa6'
-import { IoLocationSharp, IoLogoWhatsapp } from 'react-icons/io5'
-import { MdEmail } from 'react-icons/md'
-import { Link } from 'react-router-dom'
+import { t } from "i18next";
+import React from "react";
+import { FaPhone, FaWhatsapp } from "react-icons/fa6";
+import { IoLocationSharp } from "react-icons/io5";
+import { BsWhatsapp } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { IoPersonOutline, IoMailOutline, IoCallOutline } from "react-icons/io5";
 
 export default function ContactUs() {
-  return <>
- <section className='relative'>
-<div className='grid grid-cols-12 min-h-[500px] '>
-<div className='col-span-12 md:col-span-6 '>
-  
-  <div className='h-[30%] md:h-1/2 text-main-color text-5xl font-bold flex justify-center  items-center py-4'>
-  <h2>{t("contactTitl")}</h2>
-  </div>
-  
-  <div className='bg-main-color h-[70%] md:h-1/2 p-4 md:p-8 text-white text-center'>
-  <h3 className='text-2xl md:text-4xl font-bold my-4'>{t("contactTitl2")}</h3>
-  <p className='leading-relaxed pb-6'>{t("contactDesc")}</p>
-</div>
-  
-  </div>
-  
-  <div className='col-span-12 md:col-span-6 relative min-h-[300px] bg-[url("https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-cover bg-center'>
-    <div className='h-full flex justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black  opacity-40'></div>
-  </div>
-  
-</div>
+  return (
+    <>
+      <section className="relative">
+        <div className="grid grid-cols-12 min-h-[500px] ">
+          <div className="col-span-12 md:col-span-6 ">
+            <div className="h-[30%] md:h-1/2 text-main-color text-5xl font-bold flex justify-center  items-center py-4">
+              <h2>{t("contactTitl")}</h2>
+            </div>
 
+            <div className="bg-main-color h-[70%] md:h-1/2 p-4 md:p-8 text-white text-center">
+              <h3 className="text-2xl md:text-4xl font-bold my-4">
+                {t("contactTitl2")}
+              </h3>
+              <p className="leading-relaxed pb-6">{t("contactDesc")}</p>
+            </div>
+          </div>
 
-<div className='containerD'>
-<div className='myD' >
-<div className='grid grid-cols-12'>
-<div className='col-span-12 md:col-span-6'>
-<div className='bg-main-color p-8 text-white rounded w-[100%] md:w-[90%] lg:w-[70%]'>
-<h2 className='text-3xl font-bold w-[100%] md:w-[70%] lg:w-[70%]  mb-8'>{t("servicetitl")}</h2>
-<div className='flex gap-4 justify-start items-center mb-8'>
-<div className='w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center'><FaPhone /></div>
- <Link to={`https://wa.me/${"201147290516"}`}>
- <h3 className='text-white'>  {t("whatsupnum")} : </h3>
- <p className='text-white'>{t("contactPhoneDesc")}</p>
- </Link>
+          <div className='col-span-12 md:col-span-6 relative min-h-[300px] bg-[url("https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-cover bg-center'>
+            <div className="h-full flex justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black  opacity-40"></div>
+          </div>
+        </div>
 
+        <div className="containerD">
+          <div className="myD">
+            <div className="grid grid-cols-12">
+              <div className="col-span-12 md:col-span-6">
+                <div className="bg-main-color p-8 text-white rounded w-[100%] md:w-[90%] lg:w-[70%]">
+                  <h2 className="text-3xl font-bold   mb-8">
+                    {t("servicetitl")}
+                  </h2>
+                  <div className="flex gap-4 justify-start items-center mb-8">
+                    <div className="w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center cursor-pointer">
+                      <Link
+                        to="tel:+201147290516"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaPhone className="text-main-color text-lg" />
+                      </Link>
+                    </div>
+                    <div>
+                      <h3>{t("contactPhone")} : </h3>
+                      <p>{t("contactPhoneDesc")}</p>
+                    </div>
+                  </div>
 
-</div>
+                  <div className="flex gap-4 justify-start items-center mb-8">
+                    <div className="w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center cursor-pointer">
+                      <Link to={`https://wa.me/${"201147290516"}`}>
+                        <BsWhatsapp className="text-main-color text-2xl" />
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="text-white"> {t("whatsupnum")} : </h3>
+                      <p className="text-white">{t("contactPhoneDesc")}</p>
+                    </div>
+                  </div>
 
-<div className='flex gap-4 justify-start items-center mb-8'>
-<div className='w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center'><IoLogoWhatsapp /></div>
- <div>
- <h3>{t("contactPhone")} : </h3>
- <p>{t("contactPhoneDesc")}</p>
- </div>
+                  <div className="flex gap-4 justify-start items-center mb-8">
+                    <div className="w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center cursor-pointer">
+                      <Link
+                        to="mailto:example@example.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <MdEmail className="text-main-color text-2xl" />
+                      </Link>
+                    </div>
+                    <div>
+                      <h3>{t("contactEmail")} : </h3>
+                      <p>{t("emailDesc")}</p>
+                    </div>
+                  </div>
 
+                  <div className="flex gap-4 justify-start items-center mb-8">
+                    <div className="w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center cursor-pointer">
+                      <Link
+                        to="https://www.google.com/maps"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <IoLocationSharp className="text-main-color text-2xl" />
+                      </Link>
+                    </div>
+                    <div>
+                      <h3>{t("locationtile")} : </h3>
+                      <p>{t("locationDesc")}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-</div>
+              <div className="col-span-12 md:col-span-6">
+                <h3 className="text-4xl font-bold text-blue-400 my-6">
+                  {t("contactTitle") || "اتصل بنا"}
+                </h3>
+                <p className="text-gray-500 mb-6">
+                  نحن هنا لمساعدتك. يرجى ملء النموذج أدناه وسنتواصل معك في أقرب
+                  وقت ممكن.
+                </p>
+                <form className="">
+                  <div className="block md:flex gap-4 mb-2 md:mb-4">
+                    <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
+                      <IoPersonOutline className="text-gray-600 mr-2" />
+                      <input
+                        type="text"
+                        placeholder={t("contactName") || "الاسم الكامل"}
+                        className="py-4 px-2 text-gray-600 bg-transparent w-full"
+                        required
+                      />
+                    </div>
+                    <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
+                      <IoMailOutline className="text-gray-600 mr-2" />
+                      <input
+                        type="email"
+                        placeholder={t("contactEmail") || "البريد الإلكتروني"}
+                        className="py-4 px-2 text-gray-600 bg-transparent w-full"
+                        required
+                      />
+                    </div>
+                  </div>
 
-<div className='flex gap-4 justify-start items-center mb-8'>
-<div className='w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center'><MdEmail /></div>
- <div>
- <h3>{t("contactEmail")} : </h3>
- <p>{t("emailDesc")}</p>
- </div>
+                  <div className="block md:flex gap-4 mb-2 md:mb-4">
+                    <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
+                      <IoCallOutline className="text-gray-600 mr-2" />
+                      <input
+                        type="text"
+                        placeholder={t("contactPhone") || "رقم الهاتف"}
+                        className="py-4 px-2 text-gray-600 bg-transparent w-full"
+                        required
+                      />
+                    </div>
+                    <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
+                      <select
+                        className="w-full py-4 px-2 text-gray-600 bg-transparent rounded"
+                        required
+                      >
+                        <option className="" value="" disabled selected hidden>
+                          {t("contactLocationType") }
+                        </option>
+                        <option value="website">
+                          {t("website") }
+                        </option>
+                        <option value="landing_page">
+                          {t("landing_page") }
+                        </option>
+                        <option value="ecommerce">
+                          {t("ecommerce")  }
+                        </option>
+                        <option value="blog">{t("blog")}</option>
+                        <option value="portfolio">
+                          {t("portfolio") }
+                        </option>
+                        <option value="other">{t("other") }</option>
+                      </select>
+                    </div>
+                  </div>
 
+                  <div className="bg-gray-200 rounded w-full mb-8 px-2">
+                    <textarea
+                      placeholder={t("contactMessage") || "رسالتك"}
+                      className="w-full h-32 py-4 px-2 text-gray-600 bg-transparent"
+                      required
+                    />
+                  </div>
 
-</div>
+                  <button
+                    type="submit"
+                    className="text-white shadow-xl rounded-md w-1/2 block m-auto bg-main-color justify-center py-2 hover:shadow-2xl hover:shadow-blue-400"
+                  >
+                    {t("contactBtn") || "أرسل رسالتك"}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<div className='flex gap-4 justify-start items-center mb-8'>
-<div className='w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center'><IoLocationSharp /></div>
- <div>
- <h3>{t("locationtile")} : </h3>
- <p>{t("locationDesc")}</p>
- </div>
-
-
-</div>
-
-</div>
-
-</div>
-
-
-
-
-<div className='col-span-12 md:col-span-6'>
-  <h3 className='text-4xl font-bold text-blue-400 my-6'>{t("contactTitl")}</h3>
-  <form className=''>
-   <div className='block md:flex gap-4  mb-2 md:mb-4'>
-   <input type="text" placeholder={t("contactName")} className='py-4 px-2 text-gray-600 rounded bg-gray-200 w-full mb-8'  required/>
-   <input type="email" placeholder={t("contactEmail")} className='py-4 px-2 text-gray-600 rounded bg-gray-200 w-full mb-8'  required/>
-   </div>
-   
-   <div className='block md:flex gap-4 mb-2 md:mb-4'>
-   <input type="text" placeholder={t("contactPhone")} className='py-4 px-2 text-gray-600 rounded bg-gray-200 w-full mb-8'  required/>
-   <input type="text" placeholder={t("contactlocation")} className='py-4 px-2 text-gray-600 rounded bg-gray-200 w-full mb-8'  required />
-   </div>
-   
-    <textarea type="text" placeholder={t("contactMessage")} className='w-full py-4 px-2 text-gray-600 rounded bg-gray-200 mb-8'  required/>
-    <button type="buton" className=' text-white shadow-xl rounded-md w-1/2 block m-auto bg-main-color justify-center py-1 hover:shadow-2xl hover:shadow-blue-400 '>{t("contactBtn")}</button>
-    
-  </form>
-</div>
-</div>
-</div>
-</div>
-    
- 
-
-<Link to={`https://wa.me/${"201147290516"}`} className='fixed top-[90%] right-8 shadow-3xl scaled'>
-  <div className='w-[40px] h-[40px] rounded-full bg-main-color text-white  flex justify-center items-center'>
-  <FaWhatsapp />
-  </div>
- </Link>
- </section>
-
-  </>
+        <Link
+          to={`https://wa.me/${"201147290516"}`}
+          className="fixed top-[90%] right-8 shadow-3xl scaled"
+        >
+          <div className="w-[40px] h-[40px] rounded-full bg-main-color border-2 border-[#fafafa]  text-white  flex justify-center items-center">
+            <FaWhatsapp className="text-2xl" />
+          </div>
+        </Link>
+      </section>
+    </>
+  );
 }
