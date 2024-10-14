@@ -1,32 +1,33 @@
 import React from "react";
 import { teamMembers } from "../../public/Data/teamMembers";
 import { useTranslation } from "react-i18next";
+
 const TeamDC = () => {
   const { t } = useTranslation();
   return (
-    <div className="myD ">
-      <div className="containerD">
-        <h1 className="text-center text-4xl font-extrabold mb-4 text-gray-800">
+    <div className="">
+      <div className="containerD mx-auto">
+        <h1 className=" text-4xl font-extrabold mb-5 text-gray-900">
           {t("teamTitle")}
         </h1>
-        <p className="text-center text-lg mb-6 text-gray-600 leading-relaxed">
+        <p className=" text-lg mb-7 text-gray-700 leading-relaxed">
           {t("teamDesc")}
         </p>
         <div className="grid grid-cols-1 min-[490px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg  p-6 flex flex-col items-center cursor-pointer border border-gray-100"
+              className="bg-color-white rounded-lg shadow-lg p-5 flex flex-col items-center transition-transform transform hover:scale-105 border border-gray-200"
             >
               <img
                 src={member.imageUrl}
                 alt={member.name}
-                className="w-56 h-56 rounded object-cover mb-4"
+                className="w-48 h-48 rounded-full object-cover mb-4"
               />
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-gray-800">
                 {t(member.nameKey)}
               </h2>
-              <p className="text-gray-600 ">{member.role}</p>
+              <p className="text-gray-600">{member.role}</p>
             </div>
           ))}
         </div>

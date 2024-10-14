@@ -14,9 +14,9 @@ export const English = {
   servTitle2: "Web Development",
   servTitle3: "Mobile App Development",
   servDesc1:
-    "We make sure that every design we do is not just an appearance; it is a step in building a stronger relationship between your product and its users.",
+    "In each design, we focus on providing an integrated experience that combines beauty and functionality, with the aim of strengthening the relationship between your product and its users .",
   servDesc2:
-    "We make sure that every detail in the application is carefully designed and programmed to serve your vision.",
+    "We take care of every detail in the design and programming of websites, to provide integrated technical solutions that support your vision and achieve your goals effectively.",
   servDesc3:
     "When a user starts their journey with your app, the experience should be inspiring and seamless from the first moment.",
   // home page
@@ -185,9 +185,9 @@ export const English = {
   FED2: "Mahmoud Amin",
   FED3: "Amir Muslim",
   FED4: "Aya Farh",
-  BED1: "Ahmed Magdy",
+  BED1: "Abdelrhman Sharaf",
   BED2: "Rahma Atef",
-  FLD1: "Ahmed Ayman",
+  // FLD1: "Ahmed Ayman",
   UiUxD1: "Ola Ashraf",
   UiUxD2: "Nada Abdelrazek",
   PM: "Mohammed Elshahaby",
@@ -305,4 +305,57 @@ export const English = {
   emailDesc: "dotcode16@gmail.com",
   locationtile: "Location",
   locationDesc: "Cairo, Egypt",
+
+   //ServicesNav
+   servBtn: "Start your journey",
+   servTitle1: "UI/UX Design",
+ 
+   servDesc1:
+     "We make sure that every design we do is not just an appearance; it is a step in building a stronger relationship between your product and its users.",
+ 
+   servTitleSection2: "How does a perfect user interface make a difference?",
+   servDescSection2:
+     "Imagine a digital interface that is not only beautiful, but makes every click and every move intuitive and easy. That’s the essence of our UI/UX design services. We transform ideas into digital experiences that come to life, where users feel comfortable and attuned from the very first moment. We start by understanding your vision and the needs of your audience, and we transform them into designs that capture attention and engage. We make sure that every element of the design is harmonious, making users feel like they are in a familiar and engaging environment that invites them to explore and come back again. Our experiences are not just designs; they are an interactive gateway that facilitates access to the heart of the user, and creates a strong connection between your product and its users. We create interfaces that make users feel like they are part of a larger experience, one that exceeds expectations",
+   servTitleSection3:
+     "Make sure your projects are in the hands of experts experienced in building digital products.",
+   servTitleSection3h1: "Creative designs",
+   servTitleSection3p1:
+     "Every design starts with an idea, but true creativity is what turns that idea into a visual story that attracts attention and captures hearts. We start our journey with you by understanding your vision and goals, to weave innovative designs that tell the story of your brand. Every line, color, and detail reflects the essence of your idea.",
+ 
+   servTitleSection3h2: "Analyze your target audience",
+   servTitleSection3p2:
+     "We understand your audience on a deeper level, allowing us to design interfaces that align with their preferences and behavior. This careful analysis ensures that the final product is not only engaging but also effectively responds to users’ needs.",
+ 
+   servTitleSection3h3: "Programming",
+   servTitleSection3p3:
+     "Website programming involves a set of skills and techniques used to create and develop websites.",
+   servTitleSection3h4: "Application Test",
+   servTitleSection3p4:
+     "Complete testing of the application is done to ensure that the mobile application runs properly on devices such as testing functionality, performance, security.",
+   servTitleSection5: "Frequently Asked Questions",
+   servq1Section5: "How do I start?",
+   servAnsw1Sectionanswer5:
+     "All you have to do is click on the WhatsApp icon that appears in front of you and the support team will take care of the task.",
+   servq2Section5:
+     "Do you provide technical support after the site is launched?",
+   servAnsw2Sectionanswer5:
+     "“Yes, we provide ongoing technical support after the website is launched, including periodic maintenance, updates, and fixing any technical issues to ensure the website continues to operate efficiently.”",
+ 
+   // web
+   servTitle2: "Web Development",
+   servDesc2:
+     "We make sure that every detail in the application is carefully designed and programmed to serve your vision.",
+ 
+   servWebTitleSection2: "How to take your website to the top?",
+   servWebDescSection2:
+     "“Every web application development project starts with an idea, with a dedicated team working to program that idea into reality. But the secret to excellence lies in the steps that follow that idea. We don’t stop at programming only, we create web applications that are characterized by strength, superior performance, and an integrated user experience. We use the latest technologies to ensure that your application is not only effective, but excels in the market and serves your audience in the best way.”",
+   // Application
+   servTitle3: "Mobile App Development",
+   servDesc3:
+     "When a user starts their journey with your app, the experience should be inspiring and seamless from the first moment.",
+ 
+   servAppTitleSection2:
+     "How can we turn your app into a story that captivates users?",
+   servAppDescSection2:
+     "“In a crowded app market, the way your user interacts with your app is what determines its success. We believe that every app has a unique story that deserves to be told. Our mission is to transform your vision into a lively app that captures your user’s attention from the first moment, and creates an experience that keeps them coming back for more. We start with a deep understanding of your target audience and their needs, ensuring that your app is tailored to meet their expectations and fulfill their desires.”",
 };

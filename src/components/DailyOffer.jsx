@@ -4,7 +4,7 @@ const DailyOffer = () => {
   const { t } = useTranslation();
   return (
     <div className="myD">
-      <div className="containerD flex items-center justify-between gap-5 max-[795px]:flex-col  bg-color-white p-8 rounded-lg shadow border border-gray-100">
+      <div className="containerD  flex items-center justify-between gap-5 max-[795px]:flex-col  bg-color-white p-8 rounded-lg shadow border border-gray-100">
         <div className="">
           <h1 className="text-[28px] font-bold text-color-black mb-4 max-[795px]:text-center">
             {t("dO_h1")}
@@ -15,7 +15,7 @@ const DailyOffer = () => {
         </div>
         <Link
           to="/contactUs"
-          className="bg-blue-600 hover:bg-hover-main-color text-color-white text-[16px] px-4 py-2 rounded"
+          className="bg-main-color hover:bg-hover-main-color text-color-white text-[16px] px-4 py-2 rounded"
         >
           {t("dO_btn")}
         </Link>

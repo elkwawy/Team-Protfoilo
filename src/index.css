@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: "IBM Plex Sans Arabic", sans-serif;
   color: var(--text-black);
-  background-color: var(--text-white);
+  background-color: #fafafa !important ;
 }
 ul {
   list-style: none;

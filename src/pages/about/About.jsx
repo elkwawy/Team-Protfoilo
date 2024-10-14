@@ -53,9 +53,15 @@ export default function About() {
   return (
     <>
       <section className='myD'>
+
         <div className='containerD'>
           <h2 className='text-3xl'>{t("aboutHidding1")}</h2>
           <h3 className='text-2xl my-2'>
+
+        <div className='containerD '>
+          <h2 className='text-[55px] font-bold'>{t("aboutHidding1")}</h2>
+          <h3 className='text-[35px] font[800] my-2'>
+
             {t("aboutHidding2")} <span className='text-main-color'>{t("aboutHidding3")}</span>
           </h3>
           <p className='mb-6'>
@@ -65,8 +71,13 @@ export default function About() {
 
         <div className='rounded-xl overflow-hidden containerD'>
           <img
+
             src="assets\images\aboutUs\marvin-meyer-SYTO3xs06fU-unsplash (1).jpg"
             className='w-full max-h-[500px] object-cover'
+
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            className='w-full h-[400px] objec'
+
             alt=''
           />
         </div>
