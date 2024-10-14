@@ -10,7 +10,7 @@ export default function Ourwork() {
   ]
 
   return <>
-  <section className='myD'>
+  <section className='myD text-center'>
 <div className='containerD'>
 <h2 className='text-3xl font-bold'>{t("ourworkTitl")}</h2>
 <p className='my-6 text-red-600'>{t("ourworkP1")}</p>
@@ -18,18 +18,20 @@ export default function Ourwork() {
 <div>
 
 
-<div className='grid grid-cols-12 gap-4'>
+<div className=''>
   {workDetails.map((work, index) => (
-    <div key={index} className='p-1 mb-4 col-span-12 md:col-span-6 lg:col-span-4  rounded overflow-hidden shadow-xl relative bg-gradient-to-r bg-gradient-to-t from-[#89CFF0] via-[#0096C7] to-[#B3E5FC] '>
-      <div className=''> 
-        <img src={work.imagesrc} alt='' className='w-full h-full' />
-      </div>
-      <div className=' p-4 bg-white text-center'>
+    <div key={index} className='p-4 mb-4 grid grid-cols-12 gap-4  rounded overflow-hidden border border-gray-300'>
+      
+      <div className=' p-4 bg-white text-center  col-span-12 md:col-span-8 lg:col-span-8 order-2 md:order-1'>
         <h3 className='my-4'>
           <span className='text-xl font-bold'> {t("projectName")}: </span> {work.name}
         </h3>
         <p className='text-gray-500 mb-6'>{work.tittle}</p>
-        <Link to="#" className='shadow-xl rounded-xl  w-1/2 text-center inline-block m-auto bg-gradient-to-t from-blue-300 to-blue-700 text-white py-2 px-4'>{t("ourworkBtn")}</Link>
+        <Link to="#" className='shadow-xl rounded-xl w-1/2 md:w-[30%]  text-center inline-block m-auto bg-main-color hover:bg-hover-main-color text-white py-2 px-4'>{t("ourworkBtn")}</Link>
+      </div>
+
+      <div className=' col-span-12 md:col-span-4 lg:col-span-4 order-1 md:order-2'> 
+        <img src={work.imagesrc} alt='' className='w-full h-full' />
       </div>
       
     </div>
