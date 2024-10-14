@@ -11,7 +11,7 @@ export default function ContactUs() {
 <div className='grid grid-cols-12 min-h-[500px] '>
 <div className='col-span-12 md:col-span-6 '>
   
-  <div className='h-[30%] md:h-1/2 text-red-600 text-5xl font-bold flex justify-center  items-center py-4'>
+  <div className='h-[30%] md:h-1/2 text-main-color text-5xl font-bold flex justify-center  items-center py-4'>
   <h2>{t("contactTitl")}</h2>
   </div>
   
@@ -22,7 +22,7 @@ export default function ContactUs() {
   
   </div>
   
-  <div className='col-span-12 md:col-span-6 relative min-h-[300px] bg-[url("https://media.istockphoto.com/id/1916729901/photo/meeting-success-two-business-persons-shaking-hands-standing-outside.webp?a=1&b=1&s=612x612&w=0&k=20&c=y4D1ZzsXc_scJc7INNxewaDHElBqQFib_WLBMq-ZkUM=")] bg-cover bg-center'>
+  <div className='col-span-12 md:col-span-6 relative min-h-[300px] bg-[url("https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] bg-cover bg-center'>
     <div className='h-full flex justify-center items-center absolute top-0 right-0 left-0 bottom-0 bg-black  opacity-40'></div>
   </div>
   
@@ -33,11 +33,11 @@ export default function ContactUs() {
 <div className='myD' >
 <div className='grid grid-cols-12'>
 <div className='col-span-12 md:col-span-6'>
-<div className='bg-gradient-to-t from-blue-400 to-blue-800 p-8 text-white rounded w-[100%] md:w-[90%] lg:w-[70%]'>
+<div className='bg-main-color p-8 text-white rounded w-[100%] md:w-[90%] lg:w-[70%]'>
 <h2 className='text-3xl font-bold w-[100%] md:w-[70%] lg:w-[70%]  mb-8'>{t("servicetitl")}</h2>
 <div className='flex gap-4 justify-start items-center mb-8'>
 <div className='w-[40px] h-[40px] rounded-full bg-white text-main-color flex justify-center items-center'><FaPhone /></div>
- <Link to={`https://wa.me/${"01147290516"}`}>
+ <Link to={`https://wa.me/${"201147290516"}`}>
  <h3 className='text-white'>  {t("whatsupnum")} : </h3>
  <p className='text-white'>{t("contactPhoneDesc")}</p>
  </Link>
@@ -96,7 +96,7 @@ export default function ContactUs() {
    </div>
    
     <textarea type="text" placeholder={t("contactMessage")} className='w-full py-4 px-2 text-gray-600 rounded bg-gray-200 mb-8'  required/>
-    <button type="buton" className='bg-gradient-to-t from-blue-400 to-blue-800 text-white py-4 px-12 rounded-full hover:shadow-2xl hover:shadow-blue-400 '>{t("contactBtn")}</button>
+    <button type="buton" className=' text-white shadow-xl rounded-md w-1/2 block m-auto bg-main-color justify-center py-1 hover:shadow-2xl hover:shadow-blue-400 '>{t("contactBtn")}</button>
     
   </form>
 </div>
@@ -106,8 +106,8 @@ export default function ContactUs() {
     
  
 
-<Link to={`https://wa.me/${"01147290516"}`} className='fixed top-[90%] right-8 shadow-3xl scaled'>
-  <div className='w-[40px] h-[40px] rounded-full bg-gradient-to-t from-blue-400 to-blue-800 text-white  flex justify-center items-center'>
+<Link to={`https://wa.me/${"201147290516"}`} className='fixed top-[90%] right-8 shadow-3xl scaled'>
+  <div className='w-[40px] h-[40px] rounded-full bg-main-color text-white  flex justify-center items-center'>
   <FaWhatsapp />
   </div>
  </Link>
