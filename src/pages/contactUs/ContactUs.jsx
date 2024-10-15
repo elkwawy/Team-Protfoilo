@@ -109,12 +109,12 @@ export default function ContactUs() {
                   وقت ممكن.
                 </p>
                 <form className="">
-                  <div className="block md:flex gap-4 mb-2 md:mb-4">
+                  <div className="block md:flex gap-6 ">
                     <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
                       <IoPersonOutline className="text-gray-600 mr-2" />
                       <input
                         type="text"
-                        placeholder={t("contactName") || "الاسم الكامل"}
+                        placeholder={t("contactName")}
                         className="py-4 px-2 text-gray-600 bg-transparent w-full"
                         required
                       />
@@ -130,38 +130,32 @@ export default function ContactUs() {
                     </div>
                   </div>
 
-                  <div className="block md:flex gap-4 mb-2 md:mb-4">
+                  <div className="block md:flex gap-6 ">
                     <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
                       <IoCallOutline className="text-gray-600 mr-2" />
                       <input
                         type="text"
-                        placeholder={t("contactPhone") || "رقم الهاتف"}
+                        placeholder={t("contactPhone")}
                         className="py-4 px-2 text-gray-600 bg-transparent w-full"
                         required
                       />
                     </div>
                     <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
                       <select
-                        className="w-full py-4 px-2 text-gray-600 bg-transparent rounded"
+                        className="w-full py-4 px-2 text-[16px] text-gray-400 bg-transparent rounded"
                         required
                       >
                         <option className="" value="" disabled selected hidden>
-                          {t("contactLocationType") }
+                          {t("contactLocationType")}
                         </option>
-                        <option value="website">
-                          {t("website") }
-                        </option>
+                        <option value="website">{t("website")}</option>
                         <option value="landing_page">
-                          {t("landing_page") }
+                          {t("landing_page")}
                         </option>
-                        <option value="ecommerce">
-                          {t("ecommerce")  }
-                        </option>
+                        <option value="ecommerce">{t("ecommerce")}</option>
                         <option value="blog">{t("blog")}</option>
-                        <option value="portfolio">
-                          {t("portfolio") }
-                        </option>
-                        <option value="other">{t("other") }</option>
+                        <option value="portfolio">{t("portfolio")}</option>
+                        <option value="other">{t("other")}</option>
                       </select>
                     </div>
                   </div>
@@ -178,7 +172,7 @@ export default function ContactUs() {
                     type="submit"
                     className="text-white shadow-xl rounded-md w-1/2 block m-auto bg-main-color justify-center py-2 hover:shadow-2xl hover:shadow-blue-400"
                   >
-                    {t("contactBtn") || "أرسل رسالتك"}
+                    {t("contactBtn")}
                   </button>
                 </form>
               </div>

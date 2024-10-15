@@ -297,7 +297,7 @@ export const Arabic = {
   contactName: "الاسم",
   contactMessage: "رسالتك",
   contactPhone: "الهاتف",
-  contactBtn: "ارسال",
+  contactBtn: "أرسل رسالتك",
   contactlocation: "موقعك",
 
   servicetitl: "تحدث مع خدمه العملاء",
@@ -307,6 +307,7 @@ export const Arabic = {
   locationtile: "الموقع",
   locationDesc: "مصر القاهره",
   contactLocationType: "اختر نوع الموقع الذي ترغب في إنشائه",
+  
   website: "موقع ويب",
   landing_page: "صفحة هبوط",
   ecommerce: "متجر إلكتروني",
