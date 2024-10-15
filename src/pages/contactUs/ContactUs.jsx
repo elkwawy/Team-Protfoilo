@@ -105,8 +105,7 @@ export default function ContactUs() {
                   {t("contactTitle") || "اتصل بنا"}
                 </h3>
                 <p className="text-gray-500 mb-6">
-                  نحن هنا لمساعدتك. يرجى ملء النموذج أدناه وسنتواصل معك في أقرب
-                  وقت ممكن.
+                  {t("contactDes") }
                 </p>
                 <form className="">
                   <div className="block md:flex gap-6 ">

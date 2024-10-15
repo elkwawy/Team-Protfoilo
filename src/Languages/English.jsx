@@ -290,7 +290,8 @@ export const English = {
 
   contactTitl: "Contact Us",
   contactTitl2: "Let’s Complete Your Trust Now",
-  contactTitle: "اتصل بنا",
+  contactTitle: "contact us",
+  contactDes: "we are here to help you. Please fill out the form below and we will get in touch with you as soon as possible.",
   contactDesc:
     "Reaching this stage means you have begun building a bridge of trust between us. So let this trust grow and flourish, and talk now to one of our marketing experts. This communication will lead you to achieve what you aspire to. Don’t hesitate to break the barriers and contact us immediately.",
   contactEmail: "Email",
