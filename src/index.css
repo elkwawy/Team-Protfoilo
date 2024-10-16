@@ -21,6 +21,7 @@ body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   color: var(--text-black);
   background-color: var(--text-white);
+  scroll-behavior: smooth;
 }
 ul {
   list-style: none;
