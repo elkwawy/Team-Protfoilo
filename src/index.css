@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --main-color: #68bbff;
   --hover-main-color: #51a8ff;
@@ -15,13 +14,14 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
   font-family: "IBM Plex Sans Arabic", sans-serif;
   color: var(--text-black);
   background-color: var(--text-white);
-  scroll-behavior: smooth;
+  background-color: #fafafa !important ;
 }
 ul {
   list-style: none;
@@ -48,41 +48,13 @@ a {
   width: 86%;
 }
 
-
-
-::placeholder{
-  color:black !important;
-}
-
 .trans { 
     transition: all;
     transition-duration: 0.3s;
-
-}
-.arrowsEn {
-  transform: rotateX(180deg);
 }
 .myD {
   margin: 60px 0;
 }
-
-
-.scaled{
-  animation: scale 0.8s infinite;
-  transition: all 0.5s;
-}
-
-
-@keyframes scale{
-  from{
-    scale: 0.8;
-  }
-  to{
-    scale: 1;
-  }
-}
-
-
 @media (max-width: 1024px) {
   .containerD {
     width: 90%;

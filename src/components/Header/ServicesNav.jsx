@@ -6,18 +6,18 @@ const ServicesNav = ({ setIsServices, setIsMenuOpen }) => {
     {
       title: t("servTitle1"),
       description: t("servDesc1"),
-      link: "/services/uiux_services",
+      link: "uiux_services",
     },
     {
       title: t("servTitle2"),
       description: t("servDesc2"),
-      link: "/services/web_services",
+      link: "web_services",
     },
-    {
-      title: t("servTitle3"),
-      description: t("servDesc3"),
-      link: "/services/mobile_app_services",
-    },
+    // {
+    //   title: t("servTitle3"),
+    //   description: t("servDesc3"),
+    //   link: "mobile_app_services",
+    // },
   ];
   return (
     <div
@@ -37,8 +37,8 @@ const ServicesNav = ({ setIsServices, setIsMenuOpen }) => {
           key={index}
           className="block p-4 hover:bg-[#0000000d] rounded-lg "
         >
-          <h3 className="font-bold text-black">{service.title}</h3>
-          <p className="text-sm text-gray-600">{service.description}</p>
+          <h3 className="text-xl mb-2 font-bold text-black">{service.title}</h3>
+          <p className="text-base text-gray-600">{service.description}</p>
         </Link>
       ))}
     </div>

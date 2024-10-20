@@ -8,7 +8,7 @@ const HowDoWeWork = () => {
 
     return (
         <div className="flex  containerD flex-col">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 items-center">
                 <h1 className="font-bold text-center sm:text-start text-3xl sm:text-4xl lg:text-5xl">{t("stepsHomeMainTitle")}</h1>
                 <p className="text-gray-500 max-sm:mb-6 text-center sm:text-start">{t("stepsHomeMainText")}</p>
             </div>

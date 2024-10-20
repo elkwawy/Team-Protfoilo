@@ -17,7 +17,7 @@ export const teamMembers = [
   {
     nameKey: "UiUxD2",
     role: "UI/UX Designer",
-    imageUrl: "../assets/images/team/UiUxD2.jpg",
+    imageUrl: "../assets/images/team/avatarG.png",
   },
   {
     nameKey: "BED1",
@@ -27,12 +27,12 @@ export const teamMembers = [
   {
     nameKey: "BED2",
     role: "Backend Developer",
-    imageUrl: "../assets/images/team/BED2.jpg",
+    imageUrl: "../assets/images/team/avatarG.png ",
   },
   {
-    nameKey: "FLD1",
-    role: "Flutter Developer",
-    imageUrl: "../assets/images/team/FLD1.jpg",
+    nameKey: "FED3",
+    role: "Frontend Developer",
+    imageUrl: "../assets/images/team/FED3.jpg",
   },
   {
     nameKey: "PM",

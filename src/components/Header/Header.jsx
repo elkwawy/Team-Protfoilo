@@ -11,10 +11,10 @@ const Header = () => {
   const { t } = useTranslation();
   let ul = [
     { name: t("navLi1"), link: "/" },
-    { name: t("navLi2"), link: "/services" },
+    { name: t("navLi2") },
     { name: t("navLi3"), link: "/steps" },
     { name: t("navLi4"), link: "/ourWork" },
-    { name: t("navLi5"), link: "/aboutUS" },
+    { name: t("navLi5"), link: "/aboutUs" },
   ];
 
   const [isServices, setIsServices] = useState(false);
@@ -64,15 +64,16 @@ const Header = () => {
           className={`transition-all duration-300 ease-in-out transform z-50 ${
             isMenuOpen ? "max-[795px]:mt-[0.5rem]" : "max-[795px]:mt-[-120rem]"
           } flex flex-col min-[795px]:flex-row ${
-            selectedLanguage === "ar"
-              ? "min-[795px]:space-x-6"
-              : "lg:space-x-6"
+            selectedLanguage === "ar" ? "min-[795px]:space-x-6" : "lg:space-x-6"
           } min-[795px]:w-auto w-full items-center max-[795px]:my-4 max-[795px]:gap-2`}
         >
           {ul.map((li, index) =>
             index !== 1 ? (
               <Link
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsServices(false);
+                }}
                 to={li.link}
                 key={index}
                 className="font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color md:ml-4"
