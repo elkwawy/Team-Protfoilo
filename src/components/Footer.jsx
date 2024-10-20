@@ -96,7 +96,7 @@ function Footer() {
           </div>
         </ul>
       </div>
-      <ScrollTopBtn />
+      {/* <ScrollTopBtn /> */}
     </div>
   );
 }

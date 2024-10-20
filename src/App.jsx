@@ -19,6 +19,7 @@ const MobileService = React.lazy(() => import('./pages/MobileService'));
 import Application from "./Pages/Services/Application";
 import Services from "./Pages/Services/UiUx";
 import Web from "./Pages/Services/Web";
+import ScrollTopBtn from "./utils/ScrollTopBtn";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <TeamD />
       </Suspense>
       <DailyOffer />
+      <ScrollTopBtn />
       <Footer />
     </div>
   );

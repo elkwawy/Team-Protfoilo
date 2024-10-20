@@ -22,8 +22,8 @@ const HeroSection = () => {
           </div>
           <p className='text-center font-semibold text-gray-500'>{t("heroMainText")}</p>
           <div className='flex gap-5 w-full justify-center'>
-            <Link className='trans bg-main-color text-white rounded-md hover:bg-hover-main-color px-5 py-2'>{t("heroMainButton1")}</Link>
-            <Link className='trans border-2 border-gray-300 hover:bg-gray-100 rounded-md    px-5 py-2'>{t("heroMainButton2")}</Link>
+            <Link to={'/web_services'} className='trans bg-main-color text-white rounded-md hover:bg-hover-main-color px-5 py-2'>{t("heroMainButton1")}</Link>
+            <Link to={'/contactUs'} className='trans border-2 border-gray-300 hover:bg-gray-100 rounded-md    px-5 py-2'>{t("heroMainButton2")}</Link>
           </div>
         </div>
         <img src="/assets/images/home/waves.webp" alt="" className={`w-full sm:w-10/12 -z-0   absolute  ${!flag ? "top-[150%] -right-[150%]" : flag && i18n.language == 'ar' ? "top-full right-0 scale-x-[-1]" : "top-full -left-0"} trans -translate-y-full `} />
