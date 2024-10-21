@@ -14,11 +14,13 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
   font-family: "IBM Plex Sans Arabic", sans-serif;
   color: var(--text-black);
+  background-color: var(--text-white);
   background-color: #fafafa !important ;
 }
 ul {

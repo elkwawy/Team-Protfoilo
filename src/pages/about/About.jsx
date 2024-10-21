@@ -1,12 +1,12 @@
-import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import Slider from 'react-slick'; // استيراد مكتبة Slider
+import React, { useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { CiHeadphones } from 'react-icons/ci';
 import { FaAward, FaGripfire } from 'react-icons/fa';
 import { MdHeadsetMic } from 'react-icons/md';
-import { CiHeadphones } from 'react-icons/ci';
-import { useTranslation } from 'react-i18next';
-import "slick-carousel/slick/slick.css"; 
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick'; // استيراد مكتبة Slider
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 export default function About() {
   const { t } = useTranslation();
