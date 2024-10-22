@@ -19,7 +19,7 @@ import Home from "./pages/Home";
 import DailyOffer from "./components/DailyOffer";
 import Services from "./pages/Services/UiUx";
 import Web from "./pages/Services/Web";
-import Application from "./Pages/Services/Application";
+import Application from "./pages/Services/Application";
 function App() {
   const { t } = useTranslation();
   return (
