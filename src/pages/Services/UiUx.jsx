@@ -4,9 +4,10 @@ import uibanner from "../../../public/assets/images/uibanner.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceItems from "../../components/ServiceItems";
 import { FaQuestionCircle } from "react-icons/fa";
+import ServiceProjects from "../../components/commonInServices/ServiceProjects";
 function Services() {
   return (
-    <section className="bg-white">
+    <section className="">
       <div className="gap-16 items-center">
         <div className="relative font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
           <div className="absolute inset-0">
@@ -48,9 +49,10 @@ function Services() {
       </div>
 
       <ServiceItems />
+      <div className="containerD">
+        <ServiceProjects />
 
-      <div className="bg-white myD">
-        <div className="containerD px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div className="myD bg-color-white p-8 rounded-lg shadow border border-gray-100">
           <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 ">
             {t("servTitleSection5")}
           </h2>

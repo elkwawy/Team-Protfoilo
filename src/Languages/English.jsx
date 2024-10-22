@@ -25,8 +25,8 @@ export const English = {
     "Bring your dream project to life with our expert help in web and app Dev.",
   heroMainText:
     "In a competitive market, digital excellence sets leaders apart. Our customized website and application development solutions focus on achieving your goals and ensuring sustainable digital growth.",
-  heroMainButton1: "Show services",
-  heroMainButton2: "Contact us",
+heroMainButton1: "Discover who we are",
+heroMainButton2: "Create your site with us",
   // ourServices
   ourHomeServicesTitle: "Our services",
   ourHomeServicesText:

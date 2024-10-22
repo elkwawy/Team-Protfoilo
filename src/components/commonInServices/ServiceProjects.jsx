@@ -17,14 +17,15 @@ const ServiceProjects = () => {
     const projects = [
         {pic:'/assets/images/services/projects/project2.webp', title: "project1", details: "sdklahdjsbxkabckhavchavshkdbka asdvas a sdbhabkca asbdkhasb mab basdbksds", techs: ['react', 'tailwind', "router", 'figma'] },
         {pic:'/assets/images/services/projects/GYM2.webp', title: "project2", details: "sdklahdjsbxkabckhavchavshkdbka asdvas a sdbhabkca asbdkhasb mab basdbksds", techs: ['react', 'tailwind', "router", 'figma'] },
-        {pic:'/assets/images/services/projects/Honey2.webp', title: "project3", details: "sdklahdjsbxkabckhavchavshkdbka asdvas a sdbhabkca asbdkhasb mab basdbksds", techs: ['react', 'tailwind', "router", 'figma'] },
+        {pic:'/assets/images/services/projects/GYM2.webp', title: "project3", details: "sdklahdjsbxkabckhavchavshkdbka asdvas a sdbhabkca asbdkhasb mab basdbksds", techs: ['react', 'tailwind', "router", 'figma'] },
+        {pic:'/assets/images/services/projects/Honey2.webp', title: "project4", details: "sdklahdjsbxkabckhavchavshkdbka asdvas a sdbhabkca asbdkhasb mab basdbksds", techs: ['react', 'tailwind', "router", 'figma'] },
     ]
     return (
-        <div className='w-full flex flex-col gap-12 '>
-            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold sm:w-3/4 lg:w-2/3'>{t("serviceProjectsTitle")} <span className='text-main-color'>{i18n.language == 'ar' ? prefix.ar : prefix.en}</span></h1>
-            <div className='flex flex-col gap-12 '>
+        <div className='w-full flex flex-col gap-12 myD'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold sm:w-3/4 lg:w-2/3 '>{t("serviceProjectsTitle")} <span className='text-main-color'>{i18n.language == 'ar' ? prefix.ar : prefix.en}</span></h1>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 '>
                 {projects.map((project, index) => (
-                        <div  key={project.title} className={`flex  w-full flex-col-reverse gap-8 sm:gap-0 items-center sm:items-start sm:flex-row justify-between p-3 sm:p-5  trans rounded-md  border-[1px]`}>
+                        <div  key={project.title} className={`flex bg-color-white w-full flex-col-reverse gap-8 sm:gap-0 items-center sm:items-start sm:flex-row justify-between p-3 sm:p-5  trans rounded-md  border-[1px]`}>
                             <div className='flex  flex-col  gap-5'>
                                 <h2 className="text-2xl font-bold">{project.title}</h2>
                                 <p className='sm:w-3/4  text-gray-500'>{project.details}</p>
