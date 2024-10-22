@@ -12,8 +12,8 @@ const WhyWe = memo(({features}) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-10">
                 {
                     features.map((feature) => (
-                        <div key={feature.title} className="flex flex-col gap-3">
-                            <div className="bg-[#d2e9fa41] text-main-color text-3xl  w-fit rounded-md p-2">
+                        <div key={feature.title} className="flex flex-col gap-3 text-center">
+                            <div className="bg-[#d2e9fa41] text-main-color text-3xl  w-fit rounded-md p-2 mx-auto">
                                 {feature.icon}
                             </div>
                             <h2 className="font-semibold text-xl sm:text-2xl">{t(feature.title)}</h2>
