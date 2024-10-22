@@ -17,7 +17,7 @@ export const teamMembers = [
   {
     nameKey: "UiUxD2",
     role: "UI/UX Designer",
-    imageUrl: "../assets/images/team/avatarG.png",
+    imageUrl: "../assets/images/team/UiUxD2.jpg",
   },
   {
     nameKey: "BED1",
@@ -27,16 +27,26 @@ export const teamMembers = [
   {
     nameKey: "BED2",
     role: "Backend Developer",
-    imageUrl: "../assets/images/team/avatarG.png ",
-  },
-  {
-    nameKey: "FED3",
-    role: "Frontend Developer",
-    imageUrl: "../assets/images/team/FED3.jpg",
+    imageUrl: "../assets/images/team/BED2.jpg",
   },
   {
     nameKey: "PM",
     role: "Project Manager",
     imageUrl: "../assets/images/team/PM.jpg",
+  },
+  {
+    nameKey: "FED4",
+    role: "Frontend Developer",
+    imageUrl: "../assets/images/team/FED4.jpg",
+  },
+  {
+    nameKey: "BED3",
+    role: "Backend Developer",
+    imageUrl: "../assets/images/team/BED3.jpg",
+  },
+  {
+    nameKey: "FED3",
+    role: "Frontend Developer",
+    imageUrl: "../assets/images/team/FED3.jpg",
   },
 ];
