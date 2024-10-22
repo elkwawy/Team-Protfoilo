@@ -5,7 +5,6 @@ import { AiFillFacebook, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { FaSquareGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaSquareFacebook } from "react-icons/fa6";
-import ScrollTopBtn from "../utils/ScrollTopBtn";
 function Footer() {
   const { t } = useTranslation();
   let websitesParts = [
@@ -48,7 +47,7 @@ function Footer() {
     },
   ];
   return (
-    <div className="footer relative bg-main-color py-8  sm:py-11">
+    <div className="footer bg-main-color py-8  sm:py-11">
       <div className="containerD flex justify-between flex-wrap  max-sm:gap-8 max-sm:flex-col max-sm:items-center  sm:gap-10  lg:gap-8   ">
         <img src={logo} className="w-[180px] h-[180px] my-auto" alt="" />
 
@@ -96,7 +95,6 @@ function Footer() {
           </div>
         </ul>
       </div>
-      {/* <ScrollTopBtn /> */}
     </div>
   );
 }

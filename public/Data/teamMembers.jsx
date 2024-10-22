@@ -7,7 +7,7 @@ export const teamMembers = [
   {
     nameKey: "FED1", // استخدم مفتاح الترجمة بدلاً من النص
     role: "Frontend Developer",
-    imageUrl: "../assets/images/team/FED11.webp",
+    imageUrl: "../assets/images/team/FED11.jpg",
   },
   {
     nameKey: "UiUxD1",

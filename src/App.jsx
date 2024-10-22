@@ -1,27 +1,28 @@
-import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from './components/Header/Header';
-import Ourwork from './pages/ourwork/Ourwork';
+import Header from "./components/Header/Header";
+import { useTranslation } from "react-i18next";
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import React, { Suspense } from "react";
 import LoadingSpinner from "./utils/LoadingSpinner";
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import("./pages/about/About"));
-const Steps = React.lazy(() => import("./pages/steps/Steps"));
-// const Ourwork = React.lazy(() => import("./pages/ourwork/Ourwork"));
-const ContactUs = React.lazy(() => import("./pages/contactUs/ContactUs"));
-const TeamD = React.lazy(() => import("./components/TeamDC"));
-const DailyOffer = React.lazy(() => import("./components/DailyOffer"));
-const Footer = React.lazy(() => import("./components/Footer"));
 const UiUxService = React.lazy(() => import('./pages/UiUxService'));
 const WebService = React.lazy(() => import('./pages/WebService'));
 const MobileService = React.lazy(() => import('./pages/MobileService'));
 
-import Application from "./Pages/Services/Application";
+import About from "./pages/about/About";
+import Steps from "./pages/steps/Steps";
+import Ourwork from "./pages/ourwork/Ourwork";
+import ContactUs from "./pages/contactUs/ContactUs"; 
+import Home from "./pages/Home";
+
+
+import DailyOffer from "./components/DailyOffer";
+import TeamD from "./components/TeamDC";
 import Services from "./Pages/Services/UiUx";
 import Web from "./Pages/Services/Web";
-import ScrollTopBtn from "./utils/ScrollTopBtn";
-
+import Application from "./Pages/Services/Application";
 function App() {
+  const { t } = useTranslation();
   return (
     <div className="App">
       <Header />
@@ -42,10 +43,8 @@ function App() {
             element={<Application />}
           ></Route>
         </Routes>
-        <TeamD />
       </Suspense>
       <DailyOffer />
-      <ScrollTopBtn />
       <Footer />
     </div>
   );

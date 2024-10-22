@@ -1,9 +1,7 @@
 import React from "react";
 import { teamMembers } from "../../public/Data/teamMembers";
 import { useTranslation } from "react-i18next";
-import { Img } from "react-image";
-import LoadingSpinner from "../utils/LoadingSpinner";
-import LazyImage from "../utils/LazyImage";
+
 const TeamDC = () => {
   const { t } = useTranslation();
   return (
@@ -21,7 +19,7 @@ const TeamDC = () => {
               key={index}
               className="bg-color-white rounded-lg shadow-lg p-5 flex flex-col items-center transition-transform transform hover:scale-105 border border-gray-200"
             >
-              <LazyImage loader={<div className="w-56 h-56 bg-gray-300 flex items-center justify-center rounded"><LoadingSpinner /></div>}
+              <img
                 src={member.imageUrl}
                 alt={member.name}
                 className="w-48 h-48 rounded-full object-cover mb-4"

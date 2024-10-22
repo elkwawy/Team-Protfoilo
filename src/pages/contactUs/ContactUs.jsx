@@ -181,7 +181,7 @@ export default function ContactUs() {
 
         <Link
           to={`https://wa.me/${"201147290516"}`}
-          className="fixed bottom-16 mb-2 right-2 sm:right-5 trans hover:scale-110 shadow-3xl scaled"
+          className="fixed top-[90%] right-8 shadow-3xl scaled"
         >
           <div className="w-[40px] h-[40px] rounded-full bg-main-color border-2 border-[#fafafa]  text-white  flex justify-center items-center">
             <FaWhatsapp className="text-2xl" />
