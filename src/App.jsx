@@ -17,9 +17,8 @@ import Home from "./pages/Home";
 
 
 import DailyOffer from "./components/DailyOffer";
-import TeamD from "./components/TeamDC";
-import Services from "./Pages/Services/UiUx";
-import Web from "./Pages/Services/Web";
+import Services from "./pages/Services/UiUx";
+import Web from "./pages/Services/Web";
 import Application from "./Pages/Services/Application";
 function App() {
   const { t } = useTranslation();
