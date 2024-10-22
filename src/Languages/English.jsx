@@ -187,6 +187,7 @@ export const English = {
   FED4: "Aya Farh",
   BED1: "Abdelrhman Sharaf",
   BED2: "Rahma Atef",
+  BED3: "Ahmed Mohammed",
   // FLD1: "Ahmed Ayman",
   UiUxD1: "Ola Ashraf",
   UiUxD2: "Nada Abdelrazek",

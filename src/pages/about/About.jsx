@@ -53,12 +53,12 @@ export default function About() {
   return (
     <>
       <section className='myD'>
-        <div className='containerD'>
-          <h2 className='text-3xl'>{t("aboutHidding1")}</h2>
-          <h3 className='text-2xl my-2'>
+        <div className='containerD text-center'>
+          <h2 className='text-5xl font-bold mb-5'>{t("aboutHidding1")}</h2>
+          <h3 className='text-3xl font-[600] ml-20 my-4'>
             {t("aboutHidding2")} <span className='text-main-color'>{t("aboutHidding3")}</span>
           </h3>
-          <p className='mb-6'>
+          <p className='text-xl mb-6'>
             {t("aboutDes1")}  <span className='text-main-color'>{t("aboutDes2")}</span>
           </p>
         </div>
@@ -72,9 +72,9 @@ export default function About() {
         </div>
 
         <div className='containerD '>
-        <div className='myD'>
+        <div className='myD '>
         <h3 className='text-4xl font-bold'>{t("whotitl")}</h3>
-          <div className='text-gray-500 '>
+          <div className='text-gray-500 text-lg '>
             <p className='my-4 '>{t("whoDes1")}</p>
             <p className='mb-4'>{t("whoDes2")}</p>
             <p className='mb-4'>{t("whoDes3")}</p>
@@ -83,7 +83,7 @@ export default function About() {
         </div>
         </div>
 
-        <div className='bg-gradient-to-l from-blue-300 to-blue-500 py-10 '>
+        <div className='bg-gradient-to-l from-blue-200 to-blue-400 py-10 '>
           <div className='containerD grid grid-cols-12 gap-4'>
             <div className='col-span-12 md:col-span-6 xl:col-span-8 '>
               <div className='w-[100%]  xl:w-[70%]'>
@@ -163,7 +163,7 @@ export default function About() {
           <div className='myD grid grid-cols-12 gap-4'>
             <div className='col-span-12 md:col-span-8'>
               <h3 className='text-3xl font-bold mb-4'>{t("knowUsTitle")}</h3>
-              <p className='mb-4'>{t("knowUsP1")}</p>
+              <p className='mb-4 text-lg'>{t("knowUsP1")}</p>
               <p>{t("knowUsP2")}</p>
             </div>
 
