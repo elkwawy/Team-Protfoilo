@@ -24,7 +24,7 @@ const WebService = () => {
     ];
 
     return (
-        <div className=" containerD flex flex-col gap-24 py-12">
+        <div className=" containerD flex flex-col gap-24 pt-12">
             <HeroSection src={'/assets/images/services/webHero.webp'} title={"webHeroTitle"} text={"webHeroText"} />
             
             <WhyWe features={features} />
@@ -34,9 +34,6 @@ const WebService = () => {
             {/* <Suspense fallback={<div className="w-full bg-white h-full  flex items-center justify-center"><LoadingSpinner /></div>}> */}
             <ServiceProjects />
             {/* </Suspense> */}
-            
-
-            <GetYourOffer />
         </div>
     )
 }

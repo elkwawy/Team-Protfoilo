@@ -21,7 +21,7 @@ const ServiceProjects = () => {
         {pic:'/assets/images/services/projects/Honey2.webp', title: "project4", details: "sdklahdjsbxkabckhavchavshkdbka asdvas a sdbhabkca asbdkhasb mab basdbksds", techs: ['react', 'tailwind', "router", 'figma'] },
     ]
     return (
-        <div className='w-full flex flex-col gap-12 myD'>
+        <div className='w-full flex flex-col gap-12'>
             <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold sm:w-3/4 lg:w-2/3 '>{t("serviceProjectsTitle")} <span className='text-main-color'>{i18n.language == 'ar' ? prefix.ar : prefix.en}</span></h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 '>
                 {projects.map((project, index) => (

@@ -25,7 +25,7 @@ const UiUxService = () => {
         {icon:  <MdContactSupport />, title: "whyWe5Title", text:"whyWe5Text"},
     ]
     return (
-        <div className=" containerD flex flex-col gap-24 py-12">
+        <div className=" containerD flex flex-col gap-24 pt-12">
             <HeroSection src={'/assets/images/services/uiuxHero.webp'} title={"uiuxHeroTitle"} text={"uiuxHeroText"} />
             
             <WhyWe features={features} />
@@ -35,8 +35,6 @@ const UiUxService = () => {
 
             <ServiceProjects  />
 
-
-            <GetYourOffer />
         </div>
     )
 }
