@@ -226,10 +226,9 @@ export const English = {
   Btn2Dec:
     "Quick response is an essential part of providing exceptional customer service. As a team, we prioritize immediate responses to all client inquiries to ensure that any questions or issues are addressed promptly and efficiently. This approach not only enhances customer satisfaction but also reflects our commitment to delivering a smooth and effective support experience. We always strive to make communication simple and direct, which builds trust and demonstrates the team's professionalism and genuine concern for the client's needs.",
   knowUsTitle: "Know Us",
-  knowUsP1:
-    "We believe that truly understanding our capabilities begins with exploring our work and strategic partnerships. We are committed to providing comprehensive software solutions that align with the evolving market needs, while consistently achieving the highest standards of quality and innovation in every project.",
-  knowUsP2:
-    "We invite you to explore our past projects, which reflect our fruitful partnerships with clients and demonstrate our ability to turn ideas into practical solutions with tangible impact. Our goal is to build a solid digital future based on continuous collaboration and the use of advanced technologies.",
+  knowUsP1:"We believe that understanding our capabilities starts with exploring our work and partnerships. We are committed to delivering comprehensive software solutions that meet evolving market needs while upholding the highest standards of quality and innovation in every project.",
+  knowUsP2: "We invite you to explore our past projects, showcasing our successful partnerships and our ability to transform ideas into impactful solutions. Our aim is to build a robust digital future through ongoing collaboration and advanced technologies.",
+    knowUsP3:"We are dedicated to understanding our clients' needs and delivering innovative solutions that exceed expectations. Our attention to detail ensures an exceptional user experience, and we aim to build lasting partnerships based on trust and quality, providing value-added services for sustainable growth.",
 
   stepsTitle: "How do we create a remarkable digital presence for you?",
   stepsDesc:
@@ -291,7 +290,7 @@ export const English = {
   contactTitl: "Contact Us",
   contactTitl2: "Let’s Complete Your Trust Now",
   contactTitle: "contact us",
-  contactDes: "we are here to help you. Please fill out the form below and we will get in touch with you as soon as possible.",
+  contactDes: "We’re here to help! Please fill out the form below, and we’ll contact you soon",
   contactDesc:
     "Reaching this stage means you have begun building a bridge of trust between us. So let this trust grow and flourish, and talk now to one of our marketing experts. This communication will lead you to achieve what you aspire to. Don’t hesitate to break the barriers and contact us immediately.",
   contactEmail: "Email",

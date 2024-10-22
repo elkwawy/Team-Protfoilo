@@ -1,13 +1,49 @@
 import { t } from "i18next";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+
 import { IoPersonOutline, IoMailOutline, IoCallOutline } from "react-icons/io5";
 
 export default function ContactUs() {
+  const [name,setname] = useState("");
+  const [email,setemail] = useState("");
+  const [phone,setphone] = useState("");
+  const [typeOFwebsite,settypeOFwebsite] = useState("");
+  const [message,setmessage] = useState("");
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm(
+      'service_k1arj94', // Service ID
+      'template_6115i0q', // Template ID
+      form.current, // Form reference
+      'lVUeayaENlj1rJbVP' // Public Key (User ID)
+    )
+    .then(
+      (result) => {
+        console.log('SUCCESS!', result.text);
+        setname("");     
+        setmessage(""); 
+        setemail(""); 
+        setphone("");
+        settypeOFwebsite("");
+        form.current.reset()
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      }
+    );
+};
+
   return (
     <>
       <section className="relative">
@@ -107,12 +143,13 @@ export default function ContactUs() {
                 <p className="text-gray-500 mb-6">
                   {t("contactDes") }
                 </p>
-                <form className="">
+                <form className=""  ref={form} onSubmit={sendEmail}>
                   <div className="block md:flex gap-6 ">
                     <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
                       <IoPersonOutline className="text-gray-600 mr-2" />
                       <input
                         type="text"
+                        name="user-name"
                         placeholder={t("contactName")}
                         className="py-4 px-2 text-gray-600 bg-transparent w-full"
                         required
@@ -122,6 +159,7 @@ export default function ContactUs() {
                       <IoMailOutline className="text-gray-600 mr-2" />
                       <input
                         type="email"
+                        name="user-email"
                         placeholder={t("contactEmail") || "البريد الإلكتروني"}
                         className="py-4 px-2 text-gray-600 bg-transparent w-full"
                         required
@@ -134,6 +172,7 @@ export default function ContactUs() {
                       <IoCallOutline className="text-gray-600 mr-2" />
                       <input
                         type="text"
+                        name="user-phone"
                         placeholder={t("contactPhone")}
                         className="py-4 px-2 text-gray-600 bg-transparent w-full"
                         required
@@ -142,6 +181,7 @@ export default function ContactUs() {
                     <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
                       <select
                         className="w-full py-4 px-2 text-[16px] text-gray-400 bg-transparent rounded"
+                        name="user-select"
                         required
                       >
                         <option className="" value="" disabled selected hidden>
@@ -162,6 +202,7 @@ export default function ContactUs() {
                   <div className="bg-gray-200 rounded w-full mb-8 px-2">
                     <textarea
                       placeholder={t("contactMessage") || "رسالتك"}
+                      name="user-message"
                       className="w-full h-32 py-4 px-2 text-gray-600 bg-transparent"
                       required
                     />

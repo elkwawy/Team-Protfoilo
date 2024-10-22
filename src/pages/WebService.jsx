@@ -31,7 +31,7 @@ const WebService = () => {
             
             <TextSsection header={"webTextSectionTitle"} p1={"webTextSectionText1"} p2={"webTextSectionText2"} p3={null} prefix={prefix} />
 
-            {/* <Suspense fallback={<div className="w-full bg-white h-full flex items-center justify-center"><LoadingSpinner /></div>}> */}
+            {/* <Suspense fallback={<div className="w-full bg-white h-full  flex items-center justify-center"><LoadingSpinner /></div>}> */}
             <ServiceProjects />
             {/* </Suspense> */}
             

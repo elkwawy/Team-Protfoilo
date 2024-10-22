@@ -23,7 +23,7 @@ export default function About() {
     autoplaySpeed: 3000,
     slidesToShow: 1,  
     slidesToScroll: 1,
-    beforeChange: (current, next) => setActiveLink(next), 
+    
   };
 
   
@@ -53,13 +53,13 @@ export default function About() {
   return (
     <>
       <section className='myD'>
-        <div className='containerD'>
+        <div className='containerD text-center'>
           <h2 className='text-3xl'>{t("aboutHidding1")}</h2>
           <h3 className='text-2xl my-2'>
             {t("aboutHidding2")} <span className='text-main-color'>{t("aboutHidding3")}</span>
           </h3>
-          <p className='mb-6'>
-            {t("aboutDes1")}  <span className='text-main-color'>{t("aboutDes2")}</span>
+          <p className='text-xl mb-6'>
+            {t("aboutDes1")}  <span className='text-main-color '>{t("aboutDes2")}</span>
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function About() {
         <div className='containerD '>
         <div className='myD'>
         <h3 className='text-4xl font-bold'>{t("whotitl")}</h3>
-          <div className='text-gray-500 '>
+          <div className='text-gray-500 text-lg'>
             <p className='my-4 '>{t("whoDes1")}</p>
             <p className='mb-4'>{t("whoDes2")}</p>
             <p className='mb-4'>{t("whoDes3")}</p>
@@ -126,10 +126,10 @@ export default function About() {
             </div>
 
             {/* Slider Component */}
-            <div className='col-span-12 md:col-span-6 xl:col-span-4'>
+            <div className='col-span-12 md:col-span-6 xl:col-span-4  rounded-lg bg-white shadow-2xl'>
               <Slider {...slidersettings} ref={sliderRef}>
                 <div className='text-center'>
-                  <div className='bg-white p-4 rounded-lg text-blue-600 shadow-2xl '>
+                  <div className=' p-4  text-blue-600 '>
                     <h3 className='text-xl font-bold my-2'>
                       <FaAward className='mb-2 inline-block' /> {t("Btn1")}
                     </h3>
@@ -138,7 +138,7 @@ export default function About() {
                 </div>
 
                 <div className='text-center'>
-                  <div className='bg-white p-4 rounded-lg text-blue-600 shadow-2xl'>
+                  <div className=' p-4  text-blue-600  '>
                     <h3 className='text-xl font-bold my-2'>
                       <FaGripfire className='mb-2 inline-block' /> {t("Btn2")}
                     </h3>
@@ -147,7 +147,7 @@ export default function About() {
                 </div>
 
                 <div className='text-center'>
-                  <div className='bg-white p-4 rounded-lg text-blue-600 shadow-2xl'>
+                  <div className=' p-4 text-blue-600  '>
                     <h3 className='text-xl font-bold my-2'>
                       <MdHeadsetMic className='mb-2 inline-block' /> {t("Btn3")}
                     </h3>
@@ -161,17 +161,18 @@ export default function About() {
 
         <div className='containerD'>
           <div className='myD grid grid-cols-12 gap-4'>
-            <div className='col-span-12 md:col-span-8'>
+            <div className='col-span-12 md:col-span-12 lg:col-span-8'>
               <h3 className='text-3xl font-bold mb-4'>{t("knowUsTitle")}</h3>
-              <p className='mb-4'>{t("knowUsP1")}</p>
-              <p>{t("knowUsP2")}</p>
+              <p className=''>{t("knowUsP1")}</p>
+              <p className='my-6'>{t("knowUsP2")}</p>
+              <p className='mb-4'>{t("knowUsP3")}</p>
             </div>
 
-            <div className='col-span-12 md:col-span-4 rounded overflow-hidden'>
+            <div className='col-span-12 md:col-span-12 lg:col-span-4 rounded overflow-hidden'>
               <img
-                src='https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                src='public\assets\images\aboutUs\christopher-gower-m_HRfLhgABo-unsplash (1).webp'
                 alt=''
-                className='w-full'
+                className='w-full h-full object-cover'
               />
             </div>
           </div>
