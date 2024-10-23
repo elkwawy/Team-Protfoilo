@@ -1,15 +1,14 @@
 import { Link } from "react-router-dom";
 import logo from "../../public/assets/images/logoB.png";
 import { useTranslation } from "react-i18next";
-import { AiFillFacebook, AiFillLinkedin, AiFillMail } from "react-icons/ai";
-import { FaSquareGithub } from "react-icons/fa6";
+import { AiFillLinkedin } from "react-icons/ai";
+import { FaSquareGithub, FaSquareFacebook } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { FaSquareFacebook } from "react-icons/fa6";
 function Footer() {
   const { t } = useTranslation();
   let websitesParts = [
     { name: t("navLi1"), link: "/" },
-    { name: t("navLi2"), link: "/services" },
+    { name: t("navLi2"), link: "" },
     { name: t("navLi3"), link: "/steps" },
     { name: t("navLi4"), link: "/ourWork" },
     { name: t("navLi5"), link: "/aboutUs" },
@@ -23,10 +22,10 @@ function Footer() {
       title: t("servTitle2"),
       link: "/services/web_services",
     },
-    {
-      title: t("servTitle3"),
-      link: "/services/mobile_app_services",
-    },
+    // {
+    //   title: t("servTitle3"),
+    //   link: "/services/mobile_app_services",
+    // },
   ];
   const contacts = [
     {
@@ -56,7 +55,15 @@ function Footer() {
             {t("footerT1")}
           </li>
           {websitesParts.map((part, index) => (
-            <li key={index} className="font-[400] text-[24px] cursor-pointer">
+            <li
+              key={index}
+              onClick={
+                index === 1 && part.link === ""
+                  ? () => window.scrollTo(0, 1220)
+                  : () => window.scrollTo(0, 0)
+              }
+              className="font-[400] text-[24px] cursor-pointer"
+            >
               <Link className="text-color-black" to={part.link}>
                 {part.name}
               </Link>
