@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick"; // استيراد مكتبة Slider
 import { FaAward, FaGripfire } from "react-icons/fa";
@@ -8,11 +8,25 @@ import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TeamDC from "../../components/TeamDC";
+import { Img } from "react-image";
+import LoadingSpinner from "../../utils/LoadingSpinner";
 
 export default function About() {
   const { t } = useTranslation();
-  const [activeLink, setActiveLink] = useState("quality");
+  const [activeLink, setActiveLink] = useState("");
   const sliderRef = useRef(null);
+  useEffect(() => {
+    const preloadImage = (src) => {
+      const img = new Image();
+      img.src = src;
+    };
+
+   
+    preloadImage('assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp');
+  }, []);
+
+
+  
 
   const slidersettings = {
     dots: true,
@@ -62,11 +76,12 @@ export default function About() {
           </p>
         </div>
 
-        <div className="rounded-xl overflow-hidden containerD">
-          <img
-            src="assets\images\aboutUs\marvin-meyer-SYTO3xs06fU-unsplash (1).jpg"
+        <div className="rounded-xl overflow-hidden containerD w-full">
+          <Img
+            src="assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp"
             className="w-full max-h-[500px] object-cover"
             alt=""
+            loader={<div className='w-full min-h-[500px] bg-zinc-50 border-[1px] flex items-center justify-center rounded-md'><LoadingSpinner /></div>}
           />
         </div>
 
@@ -178,10 +193,11 @@ export default function About() {
             </div>
 
             <div className="col-span-12 md:col-span-12 lg:col-span-4 rounded overflow-hidden">
-              <img
+              <Img
                 src="public\assets\images\aboutUs\christopher-gower-m_HRfLhgABo-unsplash (1).webp"
                 alt=""
                 className="w-full h-full object-cover"
+                loader={<div className="w-full h-full flex items-center justify-center"><LoadingSpinner /></div>}
               />
             </div>
           </div>
