@@ -83,7 +83,7 @@ const Header = () => {
           className={`transition-all duration-300 ease-linear transform z-50 ${
             isMenuOpen
               ? "max-[880px]:mt-[0.5rem] max-[880px]:pt-3 max-[880px]:border-t max-[880px]:border-gray-200"
-              : "max-[880px]:mt-[-20rem]  border-transparent"
+              : "max-[880px]:mt-[-25rem]  border-transparent"
           } flex flex-col min-[880px]:flex-row ${
             selectedLanguage === "ar" ? "min-[880px]:space-x-6" : "lg:space-x-6"
           } min-[880px]:w-auto w-full items-center max-[880px]:my-4 max-[880px]:gap-2`}
@@ -135,8 +135,8 @@ const Header = () => {
         </nav>
           {/* Buttons Selection */}
         <div
-          className={`transition-all z-0 duration-300 ease-in-out transform ${
-            isMenuOpen ? "max-[880px]:mt-[0rem]" : "max-[880px]:mt-[-20rem]"
+          className={`transition-all z-20 duration-300 ease-in-out transform ${
+            isMenuOpen ? "max-[880px]:mt-[0rem]" : "max-[880px]:mt-[-25rem]"
           } flex gap-2 max-[880px]:mx-auto `}
         >
           {/* <select
