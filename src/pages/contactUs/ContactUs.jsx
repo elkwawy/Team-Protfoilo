@@ -5,7 +5,6 @@ import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-
 import { useTranslation } from "react-i18next";
 import { IoCallOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5";
 
@@ -15,7 +14,6 @@ export default function ContactUs() {
   const [phone,setphone] = useState("");
   const [typeOFwebsite,settypeOFwebsite] = useState("");
   const [message,setmessage] = useState("");
-
   const form = useRef();
   const {t} = useTranslation();
   const sendEmail = (e) => {
