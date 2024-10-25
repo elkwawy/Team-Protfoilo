@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logo from "../../../public/assets/images/logo.webp";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineCancel } from "react-icons/md";
@@ -19,7 +19,7 @@ const Header = () => {
     { name: t("navLi4"), link: "/ourWork" },
     { name: t("navLi5"), link: "/aboutUs" },
   ];
-
+  const loc = useLocation();
   const [isServices, setIsServices] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("ar");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,9 +39,6 @@ const Header = () => {
     setIsOpen(false); // Close dropdown after selection
   };
 
-  const handleLanguageChange = (event) => {
-    setSelectedLanguage(event.target.value);
-  };
 
   useEffect(() => {
     document.body.style.direction = selectedLanguage === "ar" ? "rtl" : "ltr";
@@ -101,8 +98,8 @@ const Header = () => {
                 key={index}
                 className={({ isActive }) =>
                   `md:ml-6  ${
-                    isActive ? "border-main-color text-main-color" : ""
-                  }  font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color`
+                    isActive && !isServices ? "border-main-color text-main-color" : "border-transparent text-color-black "
+                  }  font-[500] text-[20px] transition-all duration-300 border-b-2  hover:border-main-color hover:text-main-color`
                 }
               >
                 {li.name}
@@ -115,7 +112,7 @@ const Header = () => {
               >
               <Link
               to={li.link}
-              className={`font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color flex items-center`}
+              className={`${isServices || loc.pathname == '/uiux_services' || loc.pathname == '/web_services' ? "border-main-color text-main-color" : "text-color-black border-transparent"} font-[500]  text-[20px] transition-all duration-300 border-b-2  hover:border-main-color hover:text-main-color flex items-center`}
             >
               {li.name}
               <FaChevronDown
@@ -141,18 +138,7 @@ const Header = () => {
             isMenuOpen ? "max-[880px]:mt-[0rem]" : "max-[880px]:mt-[-25rem]"
           } flex gap-2 max-[880px]:mx-auto `}
         >
-          {/* <select
-            name="language"
-            value={selectedLanguage}
-            onChange={handleLanguageChange}
-            className={`${
-              selectedLanguage === "ar" ? "pr-5" : "px-2"
-            } sm:w-auto  py-[6.5px] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:border-transparent text-gray-700 cursor-pointer`}
-          >
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-          </select> */}
-
+          
           {/* Select Start */}
             <div className="relative h-fit text-left w-full sm:w-auto">
               <button onClick={handleToggle} className="p-2 border-[1px] h-full focus:border-main-color rounded-md flex items-center justify-center gap-1.5">
@@ -182,7 +168,6 @@ const Header = () => {
               )}
             </div>
           {/* Select End */}
-
           <Link to="/contactUs" onClick={() => setIsMenuOpen(false)}>
             <button className="bg-main-color text-color-white w-32 min-[880px]:w-full px-4 py-2 rounded hover:bg-hover-main-color  md:w-auto ">
               {t("navBtn")}
