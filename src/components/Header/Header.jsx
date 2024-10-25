@@ -53,12 +53,14 @@ const Header = () => {
       <div className="containerD flex flex-wrap justify-between items-center">
         {/* Logo */}
         <div className="flex items-center  ">
-          <Img
-            src={logo}
-            alt=""
-            className={`h-14 ${selectedLanguage === "ar" ? "ml-6" : ""}`}
-            loader={<LoadingSpinner />}
-          />
+        <Link to="/">
+        <Img
+        src={logo}
+        alt=""
+        className={`h-14 ${selectedLanguage === "ar" ? "ml-6" : ""}`}
+        loader={<LoadingSpinner />}
+        />
+        </Link>
         </div>
         {isMenuOpen ? (
           <MdOutlineCancel
