@@ -1,14 +1,35 @@
-import { Link } from "react-router-dom";
-import logo from "../../public/assets/images/logoB.png";
 import { useTranslation } from "react-i18next";
 import { AiFillLinkedin } from "react-icons/ai";
-import { FaSquareGithub, FaSquareFacebook } from "react-icons/fa6";
+import { FaSquareFacebook, FaSquareGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "../../public/assets/images/logoB.webp";
+import LazyImage from "../utils/LazyImage";
 function Footer() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+  
+  const nav = useNavigate();
+  const scrollToSection = () => {
+
+    if (pathname === '/') { 
+      const element = document.getElementById('ourServices');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else { 
+      nav('/'); 
+      setTimeout(() => { 
+        const element = document.getElementById('ourServices');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 200);  // Delay slightly to ensure the navigation completes before scrolling
+    }
+  };
   let websitesParts = [
     { name: t("navLi1"), link: "/" },
-    { name: t("navLi2"), link: "" },
+    { name: t("navLi2"), link: 'services'},
     { name: t("navLi3"), link: "/steps" },
     { name: t("navLi4"), link: "/ourWork" },
     { name: t("navLi5"), link: "/aboutUs" },
@@ -48,27 +69,37 @@ function Footer() {
   return (
     <div className="footer bg-main-color py-8  sm:py-11">
       <div className="containerD flex justify-between flex-wrap  max-sm:gap-8 max-sm:flex-col max-sm:items-center  sm:gap-10  lg:gap-8   ">
-        <img src={logo} className="w-[180px] h-[180px] my-auto" alt="" />
+        <LazyImage src={logo} className="w-[180px] h-[180px] my-auto" alt="" height={"180px"} />
 
         <ul className="space-y-2 text-center">
           <li className="text-color-black font-[700] text-[32px]">
             {t("footerT1")}
           </li>
-          {websitesParts.map((part, index) => (
-            <li
-              key={index}
-              onClick={
-                index === 1 && part.link === ""
-                  ? () => window.scrollTo(0, 1220)
-                  : () => window.scrollTo(0, 0)
-              }
-              className="font-[400] text-[24px] cursor-pointer"
-            >
-              <Link className="text-color-black" to={part.link}>
-                {part.name}
-              </Link>
-            </li>
-          ))}
+          <li  className="font-[400] text-[24px] cursor-pointer">
+            <Link className="text-color-black" to={'/'}>
+              {t("navLi1")}
+            </Link>
+          </li>
+          <li  className="font-[400] text-[24px] cursor-pointer">
+            <button onClick={scrollToSection} className="text-color-black" >
+              {t("navLi2")}
+            </button>
+          </li>
+          <li  className="font-[400] text-[24px] cursor-pointer">
+            <Link className="text-color-black" to={'/steps'}>
+              {t("navLi3")}
+            </Link>
+          </li>
+          <li  className="font-[400] text-[24px] cursor-pointer">
+            <Link className="text-color-black" to={'/ourWork'}>
+              {t("navLi4")}
+            </Link>
+          </li>
+          <li  className="font-[400] text-[24px] cursor-pointer">
+            <Link className="text-color-black" to={'/aboutUs'}>
+              {t("navLi5")}
+            </Link>
+          </li>
         </ul>
 
         <ul className="space-y-4 text-center ">

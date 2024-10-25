@@ -14,7 +14,8 @@ const HeroSection = () => {
     return () => clearTimeout(timer);
   },[flag])
   return (
-    <div className='flex relative overflow-hidden flex-col items-center justify-center gap-10 w-full h-[calc(100vh-72px)] '>
+    
+    <div className='flex relative -z-0 overflow-hidden flex-col items-center justify-center gap-10 w-full h-[calc(100vh-72px)] '>
         <div className='flex flex-col z-30 gap-10 mx-auto mt-[-2.5rem] w-[85%] sm:w-2/3 md:w-1/2'>
           <div className='relative '>
             <h1 className='text-3xl sm:text-4xl text-center lg:text-6xl lg:leading-tight font-bold '>{t("heroMainTitle")}</h1>
@@ -26,11 +27,11 @@ const HeroSection = () => {
             <Link to="/contactUs" className='trans border-2 border-gray-300 hover:bg-gray-100 rounded-md    px-5 py-2'>{t("heroMainButton2")}</Link>
           </div>
         </div>
-        <img src="/assets/images/home/waves.png" alt="" className={`w-full sm:w-10/12 -z-0   absolute  ${!flag ? "top-[150%] -right-[150%]" : flag && i18n.language == 'ar' ? "top-full right-0 scale-x-[-1]" : "top-full -left-0"} trans -translate-y-full `} />
+        <img src="/assets/images/home/waves.webp" alt="" className={`w-full sm:w-10/12 -z-0   absolute  ${!flag ? "top-[150%] -right-[150%]" : flag && i18n.language == 'ar' ? "top-full right-0 scale-x-[-1]" : "top-full -left-0"} trans -translate-y-full `} />
         <div className={` absolute top-8   bg-main-color ${!flag ? "-left-96": flag && i18n.language == 'ar' ? "-left-20" : "-right-20"} blur-[110px]  w-32 h-32 trans`} />
-        
     </div>
   )
+
 }
 
 export default HeroSection
