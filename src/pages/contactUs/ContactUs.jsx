@@ -1,13 +1,13 @@
-import { t } from "i18next";
+import emailjs from "@emailjs/browser";
 import React, { useRef, useState } from "react";
+import { BsWhatsapp } from "react-icons/bs";
 import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
-import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 
-import { IoPersonOutline, IoMailOutline, IoCallOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+import { IoCallOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5";
 
 export default function ContactUs() {
   const [name,setname] = useState("");
@@ -17,7 +17,7 @@ export default function ContactUs() {
   const [message,setmessage] = useState("");
 
   const form = useRef();
-
+  const {t} = useTranslation();
   const sendEmail = (e) => {
     e.preventDefault();
 
