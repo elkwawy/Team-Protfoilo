@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../public/assets/images/logo.png";
+import logo from "../../../public/assets/images/logo.webp";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineCancel } from "react-icons/md";
 import ServicesNav from "./ServicesNav";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
+import { Img } from "react-image";
+import LoadingSpinner from "../../utils/LoadingSpinner";
+import { FaChevronDown } from 'react-icons/fa'; 
 
 const Header = () => {
   const { t } = useTranslation();
@@ -20,6 +23,21 @@ const Header = () => {
   const [isServices, setIsServices] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("ar");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
+
+  const options = [
+    { value: 'en', label: 'English' },
+    { value: 'ar', label: 'العربية' }
+  ];
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleSelect = (value) => {
+    setSelectedLanguage(value); // Update the selected language
+    setIsOpen(false); // Close dropdown after selection
+  };
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
@@ -31,14 +49,15 @@ const Header = () => {
   }, [selectedLanguage]);
 
   return (
-    <header className="py-2 bg-white shadow">
+    <header className="py-2 bg-white shadow ">
       <div className="containerD flex flex-wrap justify-between items-center">
         {/* Logo */}
         <div className="flex items-center  ">
-          <img
+          <Img
             src={logo}
             alt=""
             className={`h-14 ${selectedLanguage === "ar" ? "ml-6" : ""}`}
+            loader={<LoadingSpinner />}
           />
         </div>
         {isMenuOpen ? (
@@ -61,7 +80,7 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <nav
-          className={`transition-all duration-300 ease-in-out transform z-50 ${
+          className={`transition-all duration-500 transform z-50 ${
             isMenuOpen ? "max-[795px]:mt-[0.5rem]" : "max-[795px]:mt-[-120rem]"
           } flex flex-col min-[795px]:flex-row ${
             selectedLanguage === "ar" ? "min-[795px]:space-x-6" : "lg:space-x-6"
@@ -106,11 +125,11 @@ const Header = () => {
         </nav>
 
         <div
-          className={`transition-all duration-300 ease-in-out transform ${
+          className={`transition-all z-50 duration-300 ease-in-out transform ${
             isMenuOpen ? "max-[795px]:mt-[0rem]" : "max-[795px]:mt-[-115rem]"
           } flex gap-2 max-[795px]:mx-auto `}
         >
-          <select
+          {/* <select
             name="language"
             value={selectedLanguage}
             onChange={handleLanguageChange}
@@ -120,14 +139,45 @@ const Header = () => {
           >
             <option value="en">English</option>
             <option value="ar">العربية</option>
-          </select>
+          </select> */}
+
+          {/* Select Start */}
+            <div className="relative h-fit text-left w-full sm:w-auto">
+              <button onClick={handleToggle} className="p-2 border-[1px] h-full focus:border-main-color rounded-md flex items-center justify-center gap-1.5">
+                <span>{options.find((option) => option.value === selectedLanguage)?.label}</span>
+
+                <FaChevronDown
+                  className={` trans font-normal text-sm mt-0.5 ${isOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {(
+                <div
+                  className={`absolute z-50 top-full left-0  mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg overflow-hidden  ${
+                    isOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                  style={{ transitionProperty: 'max-height, opacity', overflow: 'visible', zIndex:10000 }}
+                >
+                  {options.map((option) => (
+                    <div
+                      key={option.value}
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => handleSelect(option.value)}
+                    >
+                      {option.label}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          {/* Select End */}
 
           <Link to="/contactUs" onClick={() => setIsMenuOpen(false)}>
-            <button className="bg-main-color text-color-white px-4 py-2 rounded hover:bg-hover-main-color w-full md:w-auto ">
+            <button className="bg-main-color text-color-white w-32 min-[795px]:w-full px-4 py-2 rounded hover:bg-hover-main-color  md:w-auto ">
               {t("navBtn")}
             </button>
           </Link>
         </div>
+        
       </div>
     </header>
   );
