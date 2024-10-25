@@ -6,9 +6,9 @@ import LazyImage from '../../utils/LazyImage';
 
 export default function Ourwork() {
   let workDetails = [
-    { name: t("projTitl"), tittle: t("projDec1"), imageSrc: "/assets/images/services/projects/project2.webp" },
-    { name: t("projTit2"), tittle: t("projDec2"), imageSrc: "/assets/images/services/projects/GYM2.webp" },
-    { name: t("projTit2"), tittle: t("projDec2"), imageSrc: "/assets/images/services/projects/Honey2.webp" }
+    { name: t("projTitl"), tittle: t("projDec1"), imageSrc: "../assets/images/services/projects/project2.webp" },
+    { name: t("projTit2"), tittle: t("projDec2"), imageSrc: "../assets/images/services/projects/GYM2.webp" },
+    { name: t("projTit2"), tittle: t("projDec2"), imageSrc: "../assets/images/services/projects/Honey2.webp" }
   ];
 
   const preloadImages = (images) => {
