@@ -1,13 +1,13 @@
-import { useTranslation } from 'react-i18next'
-import { Img } from 'react-image';
-import LoadingSpinner from '../../utils/LoadingSpinner';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { MdArrowForward } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import i18n from '../../Languages/i18n';
+import LazyImage from '../../utils/LazyImage';
+import LoadingSpinner from '../../utils/LoadingSpinner';
 
 const Creative = () => {
     const {t} = useTranslation();
-    const prefix = {ar: "دوت كود", en :"Dot Code"}
+    const prefix = {ar: "دوت كود", en :"Dot Code"};
     return (
         <div className='containerD flex flex-col-reverse gap-10 md:gap-0 md:flex-row items-center justify-between'>
             <div className='flex flex-col text-center items-center  md:items-start md:text-start gap-6 sm:gap-10'>
@@ -18,7 +18,7 @@ const Creative = () => {
                     <MdArrowForward className={`text-lg ${i18n.language == 'ar' ? "rotate-180" : "rotate-0"} mt-1 sm:mt-1.5`} />
                 </Link>
             </div>
-            <Img src={'/assets/images/home/creative.svg'} className='w-64 min-[450px]:w-80 lg:w-96' loader={<div className='w-64 min-[450px]:w-80 lg:w-96 h-full flex items-center justify-center'><LoadingSpinner /></div>} />
+            <LazyImage src={'/assets/images/home/creative.webp'} className='w-64 min-[450px]:w-80 lg:w-96' loader={<div className='w-64 min-[450px]:w-80 lg:w-96 h-full flex items-center justify-center'><LoadingSpinner /></div>} />
         </div>
     )
 }

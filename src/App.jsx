@@ -1,31 +1,42 @@
 import "./App.css";
 import Header from "./components/Header/Header";
-import { useTranslation } from "react-i18next";
-import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
-import React, { Suspense } from "react";
+// import Footer from "./components/Footer";
+import React, { Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import LoadingSpinner from "./utils/LoadingSpinner";
+import ScrollTopBtn from "./utils/ScrollTopBtn";
 const UiUxService = React.lazy(() => import('./pages/UiUxService'));
 const WebService = React.lazy(() => import('./pages/WebService'));
 const MobileService = React.lazy(() => import('./pages/MobileService'));
+const About = React.lazy(() => import('./pages/about/About'));
+const Steps = React.lazy(() => import('./pages/steps/Steps'));
+const Ourwork = React.lazy(() => import('./pages/ourwork/Ourwork'));
+const ContactUs = React.lazy(() => import('./pages/contactUs/ContactUs'));
+const Home = React.lazy(() => import('./pages/Home'));
+const DailyOffer = React.lazy(() => import('./components/DailyOffer'));
+const Services = React.lazy(() => import('./pages/Services/UiUx'));
+const Web = React.lazy(() => import('./pages/Services/Web'));
+const Application = React.lazy(() => import('./pages/Services/Application'));
+const Footer = React.lazy(() => import("./components/Footer"));
 
-import About from "./pages/about/About";
-import Steps from "./pages/steps/Steps";
-import Ourwork from "./pages/ourwork/Ourwork";
-import ContactUs from "./pages/contactUs/ContactUs"; 
-import Home from "./pages/Home";
 
-
-import DailyOffer from "./components/DailyOffer";
-import Services from "./pages/Services/UiUx";
-import Web from "./pages/Services/Web";
-import Application from "./pages/Services/Application";
 function App() {
-  const { t } = useTranslation();
+  
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="App">
       <Header />
-      <Suspense fallback={<div className="w-full h-[calc(100vh-72px)] flex items-center justify-center"><LoadingSpinner /></div>}>
+      <Suspense
+        fallback={
+          <div className="w-full h-[calc(100vh-72px)] flex items-center justify-center">
+            <LoadingSpinner />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="uiux_services" element={<UiUxService />} />
@@ -44,6 +55,7 @@ function App() {
         </Routes>
       </Suspense>
       <DailyOffer />
+      <ScrollTopBtn />
       <Footer />
     </div>
   );

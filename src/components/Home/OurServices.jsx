@@ -1,14 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { MdDesignServices } from "react-icons/md";
 import { FaCode } from "react-icons/fa";
-import { MdMobileFriendly } from "react-icons/md";
+import { MdDesignServices } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const OurServices = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col gap-6 containerD sm:gap-10">
+    <div id="ourServices" className="flex flex-col gap-6 containerD sm:gap-10">
       <div className="flex flex-col gap-5 items-center">
         <h1 className="font-bold text-center sm:text-start text-3xl sm:text-4xl lg:text-5xl">
           {t("ourHomeServicesTitle")}
@@ -60,16 +59,16 @@ const OurServices = () => {
         </div>
 
         {/* <div className='bg-white rounded-md border-[1px] p-5 flex flex-col gap-5 lg:gap-8'>
-                    <div className='p-3 w-fit rounded-full flex items-center justify-center bg-[#d2e9fa41]'>
-                        <MdMobileFriendly className='text-3xl text-main-color' />
-                    </div>
+          <div className='p-3 w-fit rounded-full flex items-center justify-center bg-[#d2e9fa41]'>
+              <MdMobileFriendly className='text-3xl text-main-color' />
+          </div>
 
-                    <div className='flex flex-col justify-between gap-5 md:max-h-64 lg:min-h-64 xl:min-h-56'>
-                        <h1 className='text-2xl sm:text-xl lg:text-3xl font-bold'>{t("ourHomeServicesMobileTitle")}</h1>
-                        <p className=''>{t("ourHomeServicesMobileText")}</p>
-                        <Link className='trans rounded-md w-full bg-main-color justify-center py-1 flex gap-2 items-center text-white hover:bg-hover-main-color'>{t("ourHomeServicesMobileLink")}</Link>
-                        </div>
-                    </div>*/}
+          <div className='flex flex-col justify-between gap-5 md:max-h-64 lg:min-h-64 xl:min-h-56'>
+              <h1 className='text-2xl sm:text-xl lg:text-3xl font-bold'>{t("ourHomeServicesMobileTitle")}</h1>
+              <p className=''>{t("ourHomeServicesMobileText")}</p>
+              <Link className='trans rounded-md w-full bg-main-color justify-center py-1 flex gap-2 items-center text-white hover:bg-hover-main-color'>{t("ourHomeServicesMobileLink")}</Link>
+              </div>
+        </div>*/}
       </div>
     </div>
   );

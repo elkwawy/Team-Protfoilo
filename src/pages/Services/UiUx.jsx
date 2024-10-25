@@ -4,17 +4,30 @@ import uibanner from "../../../public/assets/images/uibanner.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceItems from "../../components/ServiceItems";
 import { FaQuestionCircle } from "react-icons/fa";
-import ServiceProjects from "../../components/commonInServices/ServiceProjects";
+import LazyImage from "../../utils/LazyImage";
+import React, { Suspense, useEffect } from "react";
+import LoadingSpinner from "../../utils/LoadingSpinner";
+const ServiceProjects = React.lazy(() => import('../../components/commonInServices/ServiceProjects'));
+
 function Services() {
+  // preload the hero IMG
+    useEffect(() => {
+        const preloadImage = (src) => {
+            const img = new Image();
+            img.src = src;
+        };
+        preloadImage('assets/images/uibanner.webp');
+    }, []);
   return (
     <section className="">
       <div className="gap-16 items-center">
         <div className="relative font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
-          <div className="absolute inset-0">
-            <img
+          <div className="absolute inset-0 h-[360px] sm:h-[300px]">
+            <LazyImage
               src={uibanner}
               alt="Background Image"
               className="object-cover object-center w-full h-full"
+              height="300px"
             />
             <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
@@ -45,12 +58,14 @@ function Services() {
       </div>
 
       <div className=" gap-4 containerD max-w-screen-xl lg:px-6 mx-auto">
-        <img className="myD w-full rounded-lg" src={uiux} alt="" />
+        <LazyImage className="myD w-full rounded-lg" src={uiux} alt="Steps to get the design Design" height="300px" />
       </div>
 
       <ServiceItems />
       <div className="containerD">
-        <ServiceProjects />
+        <Suspense fallback={<div className="w-full h-full bg-gray-100 flex items-center justify-center"><LoadingSpinner />  </div>}>
+          <ServiceProjects />
+        </Suspense>
 
         <div className="myD bg-color-white p-8 rounded-lg shadow border border-gray-100">
           <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 ">

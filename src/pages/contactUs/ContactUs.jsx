@@ -1,13 +1,12 @@
-import { t } from "i18next";
+import emailjs from "@emailjs/browser";
 import React, { useRef, useState } from "react";
+import { BsWhatsapp } from "react-icons/bs";
 import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
-import { BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
-
-import { IoPersonOutline, IoMailOutline, IoCallOutline } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
+import { IoCallOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5";
 
 export default function ContactUs() {
   const [name,setname] = useState("");
@@ -15,9 +14,8 @@ export default function ContactUs() {
   const [phone,setphone] = useState("");
   const [typeOFwebsite,settypeOFwebsite] = useState("");
   const [message,setmessage] = useState("");
-
   const form = useRef();
-
+  const {t} = useTranslation();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -223,7 +221,7 @@ export default function ContactUs() {
 
         <Link
           to={`https://wa.me/${"201147290516"}`}
-          className="fixed top-[90%] right-8 shadow-3xl scaled"
+          className="fixed top-[85%] hover:scale-105 trans right-8 shadow-3xl scaled"
         >
           <div className="w-[40px] h-[40px] rounded-full bg-main-color border-2 border-[#fafafa]  text-white  flex justify-center items-center">
             <FaWhatsapp className="text-2xl" />

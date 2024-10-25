@@ -8,8 +8,7 @@ import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TeamDC from "../../components/TeamDC";
-import { Img } from "react-image";
-import LoadingSpinner from "../../utils/LoadingSpinner";
+import LazyImage from "../../utils/LazyImage";
 
 export default function About() {
   const { t } = useTranslation();
@@ -20,8 +19,6 @@ export default function About() {
       const img = new Image();
       img.src = src;
     };
-
-   
     preloadImage('assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp');
   }, []);
 
@@ -77,12 +74,10 @@ export default function About() {
         </div>
 
         <div className="rounded-xl overflow-hidden containerD w-full">
-          <Img
-            src="assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp"
+          <LazyImage src="assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp"
             className="w-full max-h-[500px] object-cover"
-            alt=""
-            loader={<div className='w-full min-h-[500px] bg-zinc-50 border-[1px] flex items-center justify-center rounded-md'><LoadingSpinner /></div>}
-          />
+            height={'500px'}
+            alt="" />
         </div>
 
         <div className="containerD ">
@@ -192,13 +187,12 @@ export default function About() {
               <p className="text-[18px]">{t("knowUsP2")}</p>
             </div>
 
-            <div className="col-span-12 md:col-span-12 lg:col-span-4 rounded overflow-hidden">
-              <Img
+            <div className="h-fit col-span-12 md:col-span-12 lg:col-span-4 rounded overflow-hidden">
+              <LazyImage
                 src="public\assets\images\aboutUs\christopher-gower-m_HRfLhgABo-unsplash (1).webp"
-                alt=""
-                className="w-full h-full object-cover"
-                loader={<div className="w-full h-full flex items-center justify-center"><LoadingSpinner /></div>}
-              />
+                alt="Explore more about us"
+                height={'420px'}
+                className="w-full h-full object-cover"  />
             </div>
           </div>
         </div>
