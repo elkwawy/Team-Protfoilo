@@ -43,10 +43,10 @@ function Footer() {
       title: t("servTitle2"),
       link: "/services/web_services",
     },
-    {
-      title: t("servTitle3"),
-      link: "/services/mobile_app_services",
-    },
+    // {
+    //   title: t("servTitle3"),
+    //   link: "/services/mobile_app_services",
+    // },
   ];
   const contacts = [
     {
@@ -75,13 +75,6 @@ function Footer() {
           <li className="text-color-black font-[700] text-[32px]">
             {t("footerT1")}
           </li>
-          {/* {websitesParts.map((part, index) => (
-            <li key={index} className="font-[400] text-[24px] cursor-pointer">
-              <Link className="text-color-black" to={part.link}>
-                {part.name}
-              </Link>
-            </li>
-          ))} */}
           <li  className="font-[400] text-[24px] cursor-pointer">
             <Link className="text-color-black" to={'/'}>
               {t("navLi1")}

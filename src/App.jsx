@@ -1,9 +1,8 @@
 import "./App.css";
 import Header from "./components/Header/Header";
-import { useTranslation } from "react-i18next";
 // import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import LoadingSpinner from "./utils/LoadingSpinner";
 import ScrollTopBtn from "./utils/ScrollTopBtn";
 const UiUxService = React.lazy(() => import('./pages/UiUxService'));
@@ -22,11 +21,22 @@ const Footer = React.lazy(() => import("./components/Footer"));
 
 
 function App() {
-  const { t } = useTranslation();
+  
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="App">
       <Header />
-      <Suspense fallback={<div className="w-full h-[calc(100vh-72px)] flex items-center justify-center"><LoadingSpinner /></div>}>
+      <Suspense
+        fallback={
+          <div className="w-full h-[calc(100vh-72px)] flex items-center justify-center">
+            <LoadingSpinner />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="uiux_services" element={<UiUxService />} />

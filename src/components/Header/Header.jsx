@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../public/assets/images/logo.webp";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineCancel } from "react-icons/md";
@@ -80,25 +80,31 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <nav
-          className={`transition-all duration-500 transform z-50 ${
-            isMenuOpen ? "max-[795px]:mt-[0.5rem]" : "max-[795px]:mt-[-120rem]"
+          className={`transition-all duration-300 ease-linear transform z-50 ${
+            isMenuOpen
+              ? "max-[795px]:mt-[0.5rem] max-[795px]:pt-3 max-[795px]:border-t max-[795px]:border-gray-200"
+              : "max-[795px]:mt-[-20rem]  border-transparent"
           } flex flex-col min-[795px]:flex-row ${
             selectedLanguage === "ar" ? "min-[795px]:space-x-6" : "lg:space-x-6"
           } min-[795px]:w-auto w-full items-center max-[795px]:my-4 max-[795px]:gap-2`}
         >
           {ul.map((li, index) =>
             index !== 1 ? (
-              <Link
+              <NavLink
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsServices(false);
                 }}
                 to={li.link}
                 key={index}
-                className="font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color md:ml-4"
+                className={({ isActive }) =>
+                  ` ${
+                    isActive ? "border-main-color text-main-color" : ""
+                  }  font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color md:ml-4 `
+                }
               >
                 {li.name}
-              </Link>
+              </NavLink>
             ) : (
               <div
                 key={index}
@@ -123,7 +129,7 @@ const Header = () => {
             )
           )}
         </nav>
-
+          {/* Buttons Selection */}
         <div
           className={`transition-all z-50 duration-300 ease-in-out transform ${
             isMenuOpen ? "max-[795px]:mt-[0rem]" : "max-[795px]:mt-[-115rem]"
