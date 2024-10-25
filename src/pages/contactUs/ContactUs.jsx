@@ -47,11 +47,11 @@ export default function ContactUs() {
       <section className="relative">
         <div className="grid grid-cols-12 min-h-[500px] ">
           <div className="col-span-12 md:col-span-6 ">
-            <div className="h-[30%] md:h-1/2 text-main-color text-5xl font-bold flex justify-center  items-center py-4">
+            <div className="h-[30%] md:h-[40%] xl:h-1/2 text-main-color text-5xl font-bold flex justify-center  items-center py-4">
               <h2>{t("contactTitl")}</h2>
             </div>
 
-            <div className="bg-main-color h-[70%] md:h-1/2 p-4 md:p-8 text-white text-center">
+            <div className="bg-main-color h-[70%] md:h-[60%] xl:h-1/2 p-4 md:p-8 text-white text-center">
               <h3 className="text-2xl md:text-4xl font-bold my-4">
                 {t("contactTitl2")}
               </h3>
