@@ -1,4 +1,4 @@
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import React, { useRef, useState } from "react";
 import { FaPhone, FaWhatsapp } from "react-icons/fa6";
 import { IoLocationSharp } from "react-icons/io5";
@@ -15,7 +15,7 @@ export default function ContactUs() {
   const [phone,setphone] = useState("");
   const [typeOFwebsite,settypeOFwebsite] = useState("");
   const [message,setmessage] = useState("");
-
+  const { t } = useTranslation();
   const form = useRef();
 
   const sendEmail = (e) => {
