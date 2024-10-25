@@ -27,21 +27,14 @@ function Footer() {
       }, 200);  // Delay slightly to ensure the navigation completes before scrolling
     }
   };
-  let websitesParts = [
-    { name: t("navLi1"), link: "/" },
-    { name: t("navLi2"), link: 'services'},
-    { name: t("navLi3"), link: "/steps" },
-    { name: t("navLi4"), link: "/ourWork" },
-    { name: t("navLi5"), link: "/aboutUs" },
-  ];
   const services = [
     {
       title: t("servTitle1"),
-      link: "/services/uiux_services",
+      link: "uiux_services",
     },
     {
       title: t("servTitle2"),
-      link: "/services/web_services",
+      link: "web_services",
     },
     // {
     //   title: t("servTitle3"),

@@ -62,7 +62,7 @@ const Header = () => {
         </div>
         {isMenuOpen ? (
           <MdOutlineCancel
-            className="min-[795px]:hidden text-4xl cursor-pointer text-red-500 transition-all duration-500 transform ease-in-out opacity-100 scale-100"
+            className="min-[880px]:hidden text-4xl cursor-pointer text-red-500 transition-all duration-500 transform ease-in-out opacity-100 scale-100"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
               setIsServices(false);
@@ -70,7 +70,7 @@ const Header = () => {
           />
         ) : (
           <IoMenu
-            className="min-[795px]:hidden text-4xl cursor-pointer text-[#51a8ff]  transition-all duration-500 transform ease-in-out opacity-100 scale-100"
+            className="min-[880px]:hidden text-4xl cursor-pointer text-[#51a8ff]  transition-all duration-500 transform ease-in-out opacity-100 scale-100"
             onClick={() => {
               setIsMenuOpen(!isMenuOpen);
               setIsServices(false);
@@ -82,11 +82,11 @@ const Header = () => {
         <nav
           className={`transition-all duration-300 ease-linear transform z-50 ${
             isMenuOpen
-              ? "max-[795px]:mt-[0.5rem] max-[795px]:pt-3 max-[795px]:border-t max-[795px]:border-gray-200"
-              : "max-[795px]:mt-[-20rem]  border-transparent"
-          } flex flex-col min-[795px]:flex-row ${
-            selectedLanguage === "ar" ? "min-[795px]:space-x-6" : "lg:space-x-6"
-          } min-[795px]:w-auto w-full items-center max-[795px]:my-4 max-[795px]:gap-2`}
+              ? "max-[880px]:mt-[0.5rem] max-[880px]:pt-3 max-[880px]:border-t max-[880px]:border-gray-200"
+              : "max-[880px]:mt-[-20rem]  border-transparent"
+          } flex flex-col min-[880px]:flex-row ${
+            selectedLanguage === "ar" ? "min-[880px]:space-x-6" : "lg:space-x-6"
+          } min-[880px]:w-auto w-full items-center max-[880px]:my-4 max-[880px]:gap-2`}
         >
           {ul.map((li, index) =>
             index !== 1 ? (
@@ -98,9 +98,9 @@ const Header = () => {
                 to={li.link}
                 key={index}
                 className={({ isActive }) =>
-                  ` ${
+                  `md:ml-6  ${
                     isActive ? "border-main-color text-main-color" : ""
-                  }  font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color md:ml-4 `
+                  }  font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color`
                 }
               >
                 {li.name}
@@ -111,12 +111,16 @@ const Header = () => {
                 className="relative md:ml-4 -5"
                 onClick={() => setIsServices(!isServices)}
               >
-                <Link
-                  to={li.link}
-                  className="font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color md:mr-1"
-                >
-                  {li.name}
-                </Link>
+              <Link
+              to={li.link}
+              className={`font-[500] text-color-black text-[20px] transition-all duration-300 border-b-2 border-transparent hover:border-main-color hover:text-main-color flex items-center`}
+            >
+              {li.name}
+              <FaChevronDown
+                className={`inline font-normal text-sm duration-300 ease-in-out transition-transform ${selectedLanguage === "en" ? "ml-1" : "mr-1"} ${isServices ? 'rotate-180' : ''}`}
+              />
+            </Link>
+            
 
                 {/* Dropdown */}
                 {isServices && (
@@ -131,9 +135,9 @@ const Header = () => {
         </nav>
           {/* Buttons Selection */}
         <div
-          className={`transition-all z-50 duration-300 ease-in-out transform ${
-            isMenuOpen ? "max-[795px]:mt-[0rem]" : "max-[795px]:mt-[-115rem]"
-          } flex gap-2 max-[795px]:mx-auto `}
+          className={`transition-all z-0 duration-300 ease-in-out transform ${
+            isMenuOpen ? "max-[880px]:mt-[0rem]" : "max-[880px]:mt-[-20rem]"
+          } flex gap-2 max-[880px]:mx-auto `}
         >
           {/* <select
             name="language"
@@ -178,7 +182,7 @@ const Header = () => {
           {/* Select End */}
 
           <Link to="/contactUs" onClick={() => setIsMenuOpen(false)}>
-            <button className="bg-main-color text-color-white w-32 min-[795px]:w-full px-4 py-2 rounded hover:bg-hover-main-color  md:w-auto ">
+            <button className="bg-main-color text-color-white w-32 min-[880px]:w-full px-4 py-2 rounded hover:bg-hover-main-color  md:w-auto ">
               {t("navBtn")}
             </button>
           </Link>
