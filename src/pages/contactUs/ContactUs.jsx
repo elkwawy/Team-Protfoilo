@@ -182,9 +182,10 @@ export default function ContactUs() {
                       <select
                         className="w-full py-4 px-2 text-[16px] text-gray-400 bg-transparent rounded"
                         name="user-select"
+                        defaultValue=""
                         required
                       >
-                        <option className="" value="" disabled selected hidden>
+                        <option className="" value="" disabled  hidden>
                           {t("contactLocationType")}
                         </option>
                         <option value="website">{t("website")}</option>
