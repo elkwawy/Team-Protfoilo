@@ -86,7 +86,7 @@ const Testmonials = () => {
                         ))}
                       </div>
 
-                      <p className="mt-0.5  font-medium text-gray-900">
+                      <p className="mt-0.5  font-medium text-gray-900 text-center">
                         {item.title}
                       </p>
                     </div>

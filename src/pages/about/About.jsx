@@ -31,9 +31,10 @@ export default function About() {
     speed: 1000,
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    lazyLoad: 'ondemand'
   };
 
   const handleSlideChange = (link) => {
