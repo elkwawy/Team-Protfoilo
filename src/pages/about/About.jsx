@@ -19,7 +19,7 @@ export default function About() {
       const img = new Image();
       img.src = src;
     };
-    preloadImage('assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp');
+    preloadImage('../assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp');
   }, []);
 
 
@@ -31,9 +31,10 @@ export default function About() {
     speed: 1000,
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    lazyLoad: 'ondemand'
   };
 
   const handleSlideChange = (link) => {
@@ -74,7 +75,7 @@ export default function About() {
         </div>
 
         <div className="rounded-xl overflow-hidden containerD w-full">
-          <LazyImage src="assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp"
+          <LazyImage src="../assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp"
             className="w-full max-h-[500px] object-cover"
             height={'500px'}
             alt="" />
@@ -189,7 +190,7 @@ export default function About() {
 
             <div className="h-fit col-span-12 md:col-span-12 lg:col-span-4 rounded overflow-hidden">
               <LazyImage
-                src="public\assets\images\aboutUs\christopher-gower-m_HRfLhgABo-unsplash (1).webp"
+                src="../assets/images/aboutUs/christopher-gower-m_HRfLhgABo-unsplash (1).webp"
                 alt="Explore more about us"
                 height={'420px'}
                 className="w-full h-full object-cover"  />

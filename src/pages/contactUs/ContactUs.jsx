@@ -180,9 +180,10 @@ export default function ContactUs() {
                       <select
                         className="w-full py-4 px-2 text-[16px] text-gray-400 bg-transparent rounded"
                         name="user-select"
+                        defaultValue=""
                         required
                       >
-                        <option className="" value="" disabled selected hidden>
+                        <option className="" value="" disabled  hidden>
                           {t("contactLocationType")}
                         </option>
                         <option value="website">{t("website")}</option>
@@ -220,7 +221,7 @@ export default function ContactUs() {
 
         <Link
           to={`https://wa.me/${"201147290516"}`}
-          className="fixed top-[85%] hover:scale-105 trans right-8 shadow-3xl scaled"
+          className="fixed bottom-16 hover:scale-105 trans right-5 sm:right-8 shadow-3xl scaled"
         >
           <div className="w-[40px] h-[40px] rounded-full bg-main-color border-2 border-[#fafafa]  text-white  flex justify-center items-center">
             <FaWhatsapp className="text-2xl" />

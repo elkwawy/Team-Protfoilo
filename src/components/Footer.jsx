@@ -24,7 +24,7 @@ function Footer() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 200);  // Delay slightly to ensure the navigation completes before scrolling
+      }, 200);
     }
   };
   const services = [
