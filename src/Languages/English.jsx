@@ -293,7 +293,7 @@ heroMainButton2: "Create your site with us",
   contactTitle: "contact us",
   contactDes: "We’re here to help! Please fill out the form below, and we’ll contact you soon",
   contactDesc:
-    "Reaching this stage means you have begun building a bridge of trust between us. So let this trust grow and flourish, and talk now to one of our marketing experts. This communication will lead you to achieve what you aspire to. Don’t hesitate to break the barriers and contact us immediately.",
+"Connect with one of our marketing experts now to build trust and achieve your goals. Don’t hesitate to break the barriers and reach out to us immediately.",
   contactEmail: "Email",
   contactName: "Name",
   contactMessage: "Your Message",
