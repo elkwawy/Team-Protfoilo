@@ -1,3 +1,11 @@
+
+export const projects = [
+    {pic:'/assets/images/services/projects/project2.webp', title: "project1Title", details: "project1Text", demoLink: '#', repoLink: "#"},
+    {pic:'/assets/images/services/projects/GYM2.webp', title: "project2Title", details: "project2Text", demoLink: '#', repoLink: "#"},
+    // {pic:'/assets/images/services/projects/project2.webp', title: "project1Title", details: "project1Text"},
+    // {pic:'/assets/images/services/projects/Honey2.webp', title: "project2Title", details: "project2Text"},
+];
+
 export const teamMembers = [
   {
     nameKey: "FED2",

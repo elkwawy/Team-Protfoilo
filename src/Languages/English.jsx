@@ -367,4 +367,11 @@ heroMainButton2: "Create your site with us",
     "How can we turn your app into a story that captivates users?",
   servAppDescSection2:
     "“In a crowded app market, the way your user interacts with your app is what determines its success. We believe that every app has a unique story that deserves to be told. Our mission is to transform your vision into a lively app that captures your user’s attention from the first moment, and creates an experience that keeps them coming back for more. We start with a deep understanding of your target audience and their needs, ensuring that your app is tailored to meet their expectations and fulfill their desires.”",
+  // Service projects 
+  project1Title: "Cars Showroom",
+  project1Text: "An interactive, responsive car showroom website featuring a sleek design and detailed car listings, allowing users to browse and compare vehicles with ease.",
+  project2Title: "FitFlex GYM",
+  project2Text: "A dynamic, user-friendly gym website with a sleek design and comprehensive class schedules, making it easy for users to browse and reserve sessions.",
+  projectLiveDemo: "Live Demo",
+  projectRepo: "Project Code",
 };
