@@ -8,14 +8,14 @@ export const projects = [
 
 export const teamMembers = [
   {
-    nameKey: "FED2",
-    role: "Frontend Developer",
-    imageUrl: "../assets/images/team/FED2.webp",
-  },
-  {
     nameKey: "FED1", // استخدم مفتاح الترجمة بدلاً من النص
     role: "Frontend Developer",
     imageUrl: "../assets/images/team/FED11.webp",
+  },
+  {
+    nameKey: "FED2",
+    role: "Frontend Developer",
+    imageUrl: "../assets/images/team/FED2.webp",
   },
   {
     nameKey: "UiUxD1",
