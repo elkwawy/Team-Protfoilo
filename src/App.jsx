@@ -32,7 +32,7 @@ function App() {
       <Header />
       <Suspense
         fallback={
-          <div className="w-full h-[calc(100vh-72px)] flex items-center justify-center">
+          <div className="w-full  h-[calc(100vh-72px)] flex items-center justify-center">
             <LoadingSpinner />
           </div>
         }

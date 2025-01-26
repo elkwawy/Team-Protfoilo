@@ -47,14 +47,4 @@ export const teamMembers = [
     role: "Frontend Developer",
     imageUrl: "../assets/images/team/FED4.webp",
   },
-  // {
-  //   nameKey: "BED3",
-  //   role: "Backend Developer",
-  //   imageUrl: "../assets/images/team/BED3.webp",
-  // },
-  {
-    nameKey: "FED3",
-    role: "Frontend Developer",
-    imageUrl: "../assets/images/team/FED3.webp",
-  },
 ];
