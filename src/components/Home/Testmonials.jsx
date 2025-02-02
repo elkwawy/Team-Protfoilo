@@ -1,55 +1,7 @@
-import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
+import { testimonials } from "@/data/testimonials";
 const Testmonials = () => {
   const { t } = useTranslation();
-  const testimonials = [
-    {
-      title: t("customer1name"),
-      description: t("testimonialsHomeCustomer1"),
-      rate: 5,
-    },
-    {
-      title: t("customer2name"),
-      description: t("testimonialsHomeCustomer2"),
-      rate: 4,
-    },
-    {
-      title: t("customer3name"),
-      description: t("testimonialsHomeCustomer3"),
-      rate: 5,
-    },
-    {
-      title: t("customer4name"),
-      description: t("testimonialsHomeCustomer4"),
-      rate: 4,
-    },
-    {
-      title: t("customer5name"),
-      description: t("testimonialsHomeCustomer5"),
-      rate: 5,
-    },
-    {
-      title: t("customer6name"),
-      description: t("testimonialsHomeCustomer6"),
-      rate: 4,
-    },
-    {
-      title: t("customer7name"),
-      description: t("testimonialsHomeCustomer7"),
-      rate: 5,
-    },
-    {
-      title: t("customer8name"),
-      description: t("testimonialsHomeCustomer8"),
-      rate: 4,
-    },
-    {
-      title: t("customer9name"),
-      description: t("testimonialsHomeCustomer9"),
-      rate: 5,
-    },
-  ];
   return (
     <div className="flex containerD  flex-col gap-8">
       <div className="flex flex-col gap-3 items-center">
@@ -87,12 +39,14 @@ const Testmonials = () => {
                       </div>
 
                       <p className="mt-0.5  font-medium text-gray-900 text-center">
-                        {item.title}
+                        {t(item.title)}
                       </p>
                     </div>
                   </div>
 
-                  <p className="mt-4 text-gray-700 text-center">{item.description}</p>
+                  <p className="mt-4 text-gray-700 text-center">
+                    {t(item.description)}
+                  </p>
                 </blockquote>
               </div>
             ))}

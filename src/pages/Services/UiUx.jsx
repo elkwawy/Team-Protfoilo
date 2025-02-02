@@ -1,6 +1,6 @@
 import { t } from "i18next";
-import uiux from "../../../public/assets/images/uiux.webp";
-import uibanner from "../../../public/assets/images/uibanner.webp";
+import uiux from "../../../public/assets/servicesImgs/uiux.webp";
+import uibanner from "../../../public/assets/servicesImgs/uibanner.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceItems from "../../components/ServiceItems";
 import { FaQuestionCircle } from "react-icons/fa";

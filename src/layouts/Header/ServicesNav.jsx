@@ -1,24 +1,9 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { servicesMenu } from "@/data/servicesMenu";
 const ServicesNav = ({ setIsServices, setIsMenuOpen }) => {
   const { t } = useTranslation();
-  const servicesMenu = [
-    {
-      title: t("servTitle1"),
-      description: t("servDesc1"),
-      link: "uiux_services",
-    },
-    {
-      title: t("servTitle2"),
-      description: t("servDesc2"),
-      link: "web_services",
-    },
-    // {
-    //   title: t("servTitle3"),
-    //   description: t("servDesc3"),
-    //   link: "mobile_app_services",
-    // },
-  ];
+
   return (
     <div
       className={`${
@@ -37,8 +22,10 @@ const ServicesNav = ({ setIsServices, setIsMenuOpen }) => {
           key={index}
           className="block p-4 hover:bg-[#0000000d] rounded-lg "
         >
-          <h3 className="text-xl mb-2 font-bold text-black">{service.title}</h3>
-          <p className="text-base text-gray-600">{service.description}</p>
+          <h3 className="text-xl mb-2 font-bold text-black">
+            {t(service.title)}
+          </h3>
+          <p className="text-base text-gray-600">{t(service.description)}</p>
         </Link>
       ))}
     </div>

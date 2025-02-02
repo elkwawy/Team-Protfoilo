@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import i18n from './../../Languages/i18n';
+import i18n from '@/Languages/i18n';
 
 const TextSsection = ({header, p1, p2, p3, prefix}) => {
     const {t} = useTranslation();

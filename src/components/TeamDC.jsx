@@ -1,7 +1,7 @@
 import React from "react";
-import { teamMembers } from "../../public/Data/teamMembers";
+import { teamMembers } from "@/data/teamMembers";
 import { useTranslation } from "react-i18next";
-import LazyImage from "../utils/LazyImage";
+import LazyImage from "@/utils/LazyImage";
 
 const TeamDC = () => {
   const { t } = useTranslation();
@@ -23,19 +23,16 @@ const TeamDC = () => {
               <LazyImage
                 src={member.imageUrl}
                 alt={member.name}
-                height={'419px'}
+                height={"419px"}
                 className="w-full h-[419px] object-cover transition-transform duration-300 transform group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-45 transition-opacity duration-300"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-end text-center p-5 opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-gradient-to-t from-black via-transparent to-transparent">
-              <h2 className="text-xl font-semibold mb-2 text-white drop-shadow-md">
-                {t(member.nameKey)}
-              </h2>
-              <p className="text-white drop-shadow-md">
-                {member.role}
-              </p>
-            </div>
-            
+                <h2 className="text-xl font-semibold mb-2 text-white drop-shadow-md">
+                  {t(member.nameKey)}
+                </h2>
+                <p className="text-white drop-shadow-md">{member.role}</p>
+              </div>
             </div>
           ))}
         </div>

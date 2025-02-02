@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Slider from "react-slick"; // استيراد مكتبة Slider
+import Slider from "react-slick";
 import { FaAward, FaGripfire } from "react-icons/fa";
 import { MdHeadsetMic } from "react-icons/md";
 import { CiHeadphones } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TeamDC from "../../components/TeamDC";
-import LazyImage from "../../utils/LazyImage";
+import TeamDC from "@/components/TeamDC";
+import LazyImage from "@/utils/LazyImage";
 
-export default function About() {
+export default function AboutUs() {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useState("");
   const sliderRef = useRef(null);
@@ -19,11 +19,8 @@ export default function About() {
       const img = new Image();
       img.src = src;
     };
-    preloadImage('../assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp');
+    preloadImage("../assets/aboutUs/aboutUs-img1.webp");
   }, []);
-
-
-  
 
   const slidersettings = {
     dots: true,
@@ -34,7 +31,7 @@ export default function About() {
     autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    lazyLoad: 'ondemand'
+    lazyLoad: "ondemand",
   };
 
   const handleSlideChange = (link) => {
@@ -75,10 +72,12 @@ export default function About() {
         </div>
 
         <div className="rounded-xl overflow-hidden containerD w-full">
-          <LazyImage src="../assets/images/aboutUs/marvin-meyer-SYTO3xs06fU-unsplash-_1_.webp"
+          <LazyImage
+            src="/assets/aboutUs/aboutUs-img2.webp"
             className="w-full max-h-[500px] object-cover"
-            height={'500px'}
-            alt="" />
+            height={"500px"}
+            alt=""
+          />
         </div>
 
         <div className="containerD ">
@@ -190,10 +189,11 @@ export default function About() {
 
             <div className="h-fit col-span-12 md:col-span-12 lg:col-span-4 rounded overflow-hidden">
               <LazyImage
-                src="../assets/images/aboutUs/christopher-gower-m_HRfLhgABo-unsplash (1).webp"
+                src="assets/aboutUs/aboutUs-img1.webp"
                 alt="Explore more about us"
-                height={'420px'}
-                className="w-full h-full object-cover"  />
+                height={"420px"}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
