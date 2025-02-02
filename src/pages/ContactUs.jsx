@@ -7,6 +7,7 @@ import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoCallOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5";
+import Toast from "@/components/Toast";
 
 export default function ContactUs() {
   const [name,setname] = useState("");
@@ -14,6 +15,7 @@ export default function ContactUs() {
   const [phone,setphone] = useState("");
   const [typeOFwebsite,settypeOFwebsite] = useState("");
   const [message,setmessage] = useState("");
+  const[toast,setToast] = useState(false);
   const form = useRef();
   const {t} = useTranslation();
   const sendEmail = (e) => {
@@ -35,6 +37,10 @@ export default function ContactUs() {
         setphone("");
         settypeOFwebsite("");
         form.current.reset()
+        setToast(true);
+        setTimeout(() => {
+          setToast(false);
+        },3000);
       },
       (error) => {
         console.log('FAILED...', error.text);
@@ -218,7 +224,7 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
-
+ {toast && <Toast/>}
         <Link
           to={`https://wa.me/${"201147290516"}`}
           className="fixed bottom-16 hover:scale-105 trans right-5 sm:right-8 shadow-3xl scaled"
