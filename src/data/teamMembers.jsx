@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     nameKey: "FED1",
     role: "Frontend Developer",
-    imageUrl: "assets/teamMembers/FED11.webp",
+    imageUrl: "assets/teamMembers/FED1.webp",
   },
   {
     nameKey: "FED2",
@@ -37,7 +37,7 @@ export const teamMembers = [
   {
     nameKey: "FED3",
     role: "Frontend Developer",
-    imageUrl: "assets/teamMembers/FED4.webp",
+    imageUrl: "assets/teamMembers/FED3.webp",
   },
   {
     nameKey: "FLD1",
