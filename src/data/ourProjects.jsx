@@ -1,4 +1,3 @@
-import project2 from "@/assets/ourProjects/project2.webp";
 export const ourProjects = [
   {
     pic: "assets/ourProjects/project2.webp",
