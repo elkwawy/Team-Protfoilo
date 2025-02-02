@@ -267,7 +267,7 @@ heroMainButton2: "Create your site with us",
   developP2:
     "The interface is tested on a variety of browsers and devices to ensure a consistent and smooth experience across all platforms.",
   developP3:
-    "At the same time, the infrastructure development team works on building the database and setting up servers using programming languages like Python with the Django framework or PHP with the Laravel framework.",
+    "At the same time, the infrastructure development team is building the database and setting up the servers using programming languages such as JavaScript with Node.js and the Express framework.",
   developP4:
     "We set up APIs that act as a bridge between the frontend and the database, focusing on security and performance speed. Measures taken include securing data using encryption techniques, mitigating attack risks, and ensuring compliance with data protection standards like GDPR.",
   developP5:
@@ -314,6 +314,7 @@ heroMainButton2: "Create your site with us",
   blog: "Blog",
   portfolio: "Portfolio",
   other: "Other",
+  toastmsg:"message sent successfully",
 
   //ServicesNav
   servBtn: "Start your journey",
