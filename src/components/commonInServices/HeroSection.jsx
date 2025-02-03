@@ -1,11 +1,11 @@
 import i18next from "i18next";
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MdRocket, MdRocketLaunch } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 
-const HeroSection = ({src, title, text}) => {
+const HeroSection = memo(({src, title, text}) => {
     const {t} = useTranslation();
     const currLang = i18next.language;
     const [style, setStyle] = useState(currLang === 'ar' ? "90deg" : "-90deg");
@@ -60,6 +60,6 @@ const HeroSection = ({src, title, text}) => {
             <div style={{background: `linear-gradient(${style}, rgba(250, 250, 250, 0) 2%, rgba(250, 250, 250, 0.8716736694677871) 55%, rgba(250, 250, 250, 0.9473039215686274) 100%)`}} className="serviceHeroSection absolute top-0 right-0  w-full h-full z-20" />
         </div>
     )
-}
+})
 
 export default HeroSection

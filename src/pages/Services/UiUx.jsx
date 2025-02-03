@@ -1,14 +1,7 @@
-import uibanner from "../../../public/assets/servicesImgs/uibanner.webp";
-import React, { Suspense} from "react";
-import LoadingSpinner from "../../utils/LoadingSpinner";
-const ServiceProjects = React.lazy(() =>
-  import("../../components/commonInServices/ServiceProjects")
-);
-import WhyWe from "@/components/commonInServices/WhyWe";
-import { FeaturesUiUx } from "@/data/features/FeaturesUiUx";
-import HeroSection from "@/components/Services/HeroSection";
-import TextSsection from "@/components/commonInServices/TextSsection";
-import FaqSection from "@/components/Services/FaqSection";
+import LoadingSpinner from "@/utils/LoadingSpinner";
+import uibanner from "assets/servicesImgs/uibanner.webp";
+import React, { Suspense } from "react";
+const ServiceProjects = React.lazy(() => import('@/components/commonInServices/ServiceProjects'));
 
 function Services() {
 

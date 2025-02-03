@@ -19,7 +19,7 @@ const Header = () => {
   ];
   const loc = useLocation();
   const [isServices, setIsServices] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("ar");
+  const [selectedLanguage, setSelectedLanguage] = useState((localStorage.length > 0 &&localStorage.getItem("lng")) || "ar");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,14 +33,23 @@ const Header = () => {
   };
 
   const handleSelect = (value) => {
+    // value is ar || en 
+    localStorage.setItem("lng", (value));
     setSelectedLanguage(value); // Update the selected language
     setIsOpen(false); // Close dropdown after selection
+    document.body.style.direction = value === "ar" ? "rtl" : "ltr";
+    i18n.changeLanguage(value); // Change the language in i18n
   };
-
-  useEffect(() => {
-    document.body.style.direction = selectedLanguage === "ar" ? "rtl" : "ltr";
-    i18n.changeLanguage(selectedLanguage);
-  }, [selectedLanguage]);
+  
+  useEffect(() => { 
+    if ( localStorage.length > 0 && localStorage.getItem("lng")) {  
+      document.body.style.direction = localStorage.getItem("lng") === "en" ? "ltr" : "rtl";
+    }
+    else { 
+      document.body.style.direction = "rtl";
+    }
+  }, [])
+  
 
   return (
     <header className="py-2 bg-white shadow ">
@@ -163,7 +172,7 @@ const Header = () => {
               <span>
                 {
                   options.find((option) => option.value === selectedLanguage)
-                    ?.label
+                    ?.label 
                 }
               </span>
 
@@ -175,7 +184,7 @@ const Header = () => {
             </button>
             {
               <div
-                className={`absolute z-50 top-full left-0  mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg overflow-hidden  ${
+                className={`absolute z-50 top-full left-0   mt-1 w-20 bg-white border border-gray-300 rounded-md shadow-lg  ${
                   isOpen ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
                 }`}
                 style={{
@@ -187,7 +196,7 @@ const Header = () => {
                 {options.map((option) => (
                   <div
                     key={option.value}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    className="w-full text-center py-2 hover:bg-gray-100   cursor-pointer rounded-md"
                     onClick={() => handleSelect(option.value)}
                   >
                     {option.label}

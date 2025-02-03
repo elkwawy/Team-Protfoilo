@@ -32,6 +32,7 @@ const LazyImage =  memo(({ src, alt,className,height}) => {
             ref={imageRef}
             src={src}
             alt={alt || 'Image'}
+            loading="lazy"
             className={className}
         />
     );

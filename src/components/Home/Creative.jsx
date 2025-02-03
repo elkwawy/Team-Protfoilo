@@ -1,9 +1,10 @@
+import i18n from '@/Languages/i18n';
 import { useTranslation } from 'react-i18next';
 import { MdArrowForward } from 'react-icons/md';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Link } from 'react-router-dom';
-import i18n from '@/Languages/i18n';
-import LazyImage from '@/utils/LazyImage';
-import LoadingSpinner from '@/utils/LoadingSpinner';
+
 
 const Creative = () => {
     const {t} = useTranslation();
@@ -18,7 +19,8 @@ const Creative = () => {
                     <MdArrowForward className={`text-lg ${i18n.language == 'ar' ? "rotate-180" : "rotate-0"} mt-1 sm:mt-1.5`} />
                 </Link>
             </div>
-            <LazyImage src={'assets/home/creative.webp'} className='w-64 min-[450px]:w-80 lg:w-96' loader={<div className='w-64 min-[450px]:w-80 lg:w-96 h-full flex items-center justify-center'><LoadingSpinner /></div>} />
+
+            <LazyLoadImage src={'assets/home/creative.webp'} className='w-64 min-[450px]:min-w-80 lg:min-w-96' effect='blur'/>
         </div>
     )
 }

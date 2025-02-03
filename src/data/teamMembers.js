@@ -10,6 +10,11 @@ export const teamMembers = [
     imageUrl: "assets/teamMembers/FED2.webp",
   },
   {
+    nameKey: "FED3",
+    role: "Frontend Developer",
+    imageUrl: "assets/teamMembers/FED3.webp",
+  },
+  {
     nameKey: "UiUxD1",
     role: "UI/UX Designer",
     imageUrl: "assets/teamMembers/UiUxD1.webp",
