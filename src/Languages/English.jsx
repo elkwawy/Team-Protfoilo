@@ -25,8 +25,8 @@ export const English = {
     "Bring your dream project to life with our expert help in web and app Dev.",
   heroMainText:
     "In a competitive market, digital excellence sets leaders apart. Our customized website and application development solutions focus on achieving your goals and ensuring sustainable digital growth.",
-heroMainButton1: "Discover who we are",
-heroMainButton2: "Create your site with us",
+  heroMainButton1: "Discover who we are",
+  heroMainButton2: "Create your site with us",
   // ourServices
   ourHomeServicesTitle: "Our services",
   ourHomeServicesText:
@@ -227,9 +227,12 @@ heroMainButton2: "Create your site with us",
   Btn2Dec:
     "Quick response is an essential part of providing exceptional customer service. As a team, we prioritize immediate responses to all client inquiries to ensure that any questions or issues are addressed promptly and efficiently. This approach not only enhances customer satisfaction but also reflects our commitment to delivering a smooth and effective support experience. We always strive to make communication simple and direct, which builds trust and demonstrates the team's professionalism and genuine concern for the client's needs.",
   knowUsTitle: "Know Us",
-  knowUsP1:"We believe that understanding our capabilities starts with exploring our work and partnerships. We are committed to delivering comprehensive software solutions that meet evolving market needs while upholding the highest standards of quality and innovation in every project.",
-  knowUsP2: "We invite you to explore our past projects, showcasing our successful partnerships and our ability to transform ideas into impactful solutions. Our aim is to build a robust digital future through ongoing collaboration and advanced technologies.",
-    knowUsP3:"We are dedicated to understanding our clients' needs and delivering innovative solutions that exceed expectations. Our attention to detail ensures an exceptional user experience, and we aim to build lasting partnerships based on trust and quality, providing value-added services for sustainable growth.",
+  knowUsP1:
+    "We believe that understanding our capabilities starts with exploring our work and partnerships. We are committed to delivering comprehensive software solutions that meet evolving market needs while upholding the highest standards of quality and innovation in every project.",
+  knowUsP2:
+    "We invite you to explore our past projects, showcasing our successful partnerships and our ability to transform ideas into impactful solutions. Our aim is to build a robust digital future through ongoing collaboration and advanced technologies.",
+  knowUsP3:
+    "We are dedicated to understanding our clients' needs and delivering innovative solutions that exceed expectations. Our attention to detail ensures an exceptional user experience, and we aim to build lasting partnerships based on trust and quality, providing value-added services for sustainable growth.",
 
   stepsTitle: "How do we create a remarkable digital presence for you?",
   stepsDesc:
@@ -291,9 +294,10 @@ heroMainButton2: "Create your site with us",
   contactTitl: "Contact Us",
   contactTitl2: "Let’s Complete Your Trust Now",
   contactTitle: "contact us",
-  contactDes: "We’re here to help! Please fill out the form below, and we’ll contact you soon",
+  contactDes:
+    "We’re here to help! Please fill out the form below, and we’ll contact you soon",
   contactDesc:
-"Connect with one of our marketing experts now to build trust and achieve your goals. Don’t hesitate to break the barriers and reach out to us immediately.",
+    "Connect with one of our marketing experts now to build trust and achieve your goals. Don’t hesitate to break the barriers and reach out to us immediately.",
   contactEmail: "Email",
   contactName: "Name",
   contactMessage: "Your Message",
@@ -314,7 +318,7 @@ heroMainButton2: "Create your site with us",
   blog: "Blog",
   portfolio: "Portfolio",
   other: "Other",
-  toastmsg:"message sent successfully",
+  toastmsg: "message sent successfully",
 
   //ServicesNav
   servBtn: "Start your journey",
@@ -342,14 +346,37 @@ heroMainButton2: "Create your site with us",
   servTitleSection3h4: "Application Test",
   servTitleSection3p4:
     "Complete testing of the application is done to ensure that the mobile application runs properly on devices such as testing functionality, performance, security.",
-  servTitleSection5: "Frequently Asked Questions",
-  servq1Section5: "How do I start?",
-  servAnsw1Sectionanswer5:
-    "All you have to do is click on the WhatsApp icon that appears in front of you and the support team will take care of the task.",
-  servq2Section5:
-    "Do you provide technical support after the site is launched?",
-  servAnsw2Sectionanswer5:
-    "“Yes, we provide ongoing technical support after the website is launched, including periodic maintenance, updates, and fixing any technical issues to ensure the website continues to operate efficiently.”",
+  
+    //Frequently Asked Questions
+  Faq: "Frequently Asked Questions",
+  // UI/UX FAQ
+  faqQuestionUiUx1: "Why does my project need a professional UI/UX design?",
+  faqAnswerUiUx1:
+    "User experience and interface design directly impact the success of your product. A well-designed interface ensures users interact with your site easily, increasing conversion rates and reducing bounce rates.",
+
+  faqQuestionUiUx2:
+    "How long does it take to design the UI/UX for my website or application?",
+  faqAnswerUiUx2:
+    "The timeline varies based on the project size and complexity. Typically, the design process takes between 3 to 6 weeks, including research, planning, wireframing, design, testing, and refinements.",
+
+  faqQuestionUiUx3:
+    "What is the difference between custom design and pre-made templates?",
+  faqAnswerUiUx3:
+    "A custom design is tailored specifically to your brand's needs, providing a superior user experience and differentiation from competitors. Pre-made templates, on the other hand, are more affordable but come with limited customization and user experience options.",
+
+  faqQuestionUiUx4:
+    "Can I request modifications after the design is completed?",
+  faqAnswerUiUx4:
+    "Yes, we provide multiple revision rounds to ensure you are fully satisfied with the final design. The number of revisions is agreed upon in the contract based on project requirements.",
+
+  faqQuestionUiUx5:
+    "Is UI/UX design alone sufficient, or do I also need website development?",
+  faqAnswerUiUx5:
+    "UI/UX design is the first step, but it requires development (Front-end & Back-end) to be implemented effectively on your website or application. We offer both design and development services for a seamless experience.",
+
+  faqQuestionUiUx6: "How can I get started working with you?",
+  faqAnswerUiUx6:
+    "You can reach out to us through the contact form on our website or via WhatsApp to discuss your requirements. We will analyze your needs and provide a detailed proposal, including cost and timeline estimates.",
 
   // web
   servTitle2: "Web Development",
@@ -368,11 +395,13 @@ heroMainButton2: "Create your site with us",
     "How can we turn your app into a story that captivates users?",
   servAppDescSection2:
     "“In a crowded app market, the way your user interacts with your app is what determines its success. We believe that every app has a unique story that deserves to be told. Our mission is to transform your vision into a lively app that captures your user’s attention from the first moment, and creates an experience that keeps them coming back for more. We start with a deep understanding of your target audience and their needs, ensuring that your app is tailored to meet their expectations and fulfill their desires.”",
-  // Service projects 
+  // Service projects
   project1Title: "Cars Showroom",
-  project1Text: "An interactive, responsive car showroom website featuring a sleek design and detailed car listings, allowing users to browse and compare vehicles with ease.",
+  project1Text:
+    "An interactive, responsive car showroom website featuring a sleek design and detailed car listings, allowing users to browse and compare vehicles with ease.",
   project2Title: "FitFlex GYM",
-  project2Text: "A dynamic, user-friendly gym website with a sleek design and comprehensive class schedules, making it easy for users to browse and reserve sessions.",
+  project2Text:
+    "A dynamic, user-friendly gym website with a sleek design and comprehensive class schedules, making it easy for users to browse and reserve sessions.",
   projectLiveDemo: "Live Demo",
   projectRepo: "Project Code",
 };

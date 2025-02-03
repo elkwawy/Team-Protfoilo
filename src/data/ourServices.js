@@ -7,8 +7,8 @@ export const ourServices = [
     title: "servTitle2",
     link: "/services/web_services",
   },
-  {
-    title: "servTitle3",
-    link: "/services/mobile_app_services",
-  },
+  // {
+  //   title: "servTitle3",
+  //   link: "/services/mobile_app_services",
+  // },
 ];

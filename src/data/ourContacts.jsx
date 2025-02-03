@@ -2,7 +2,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { FaSquareFacebook, FaSquareGithub } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-export const ourContacts = [
+export const OurContacts = [
     {
       link: "mailto:dotcode16@gmail.com",
       icon: <MdEmail className="text-color-black text-[63px]" />,

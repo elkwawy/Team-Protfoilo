@@ -49,7 +49,7 @@ const Header = () => {
         <div className="flex items-center  ">
           <Link to="/">
             <Img
-              src="assets/.codeLogo/logo.webp"
+              src="/assets/.codeLogo/logo.webp"
               alt=""
               className={`h-14 ${selectedLanguage === "ar" ? "ml-6" : ""}`}
               loader={<LoadingSpinner />}

@@ -1,38 +1,43 @@
 import React, { Suspense } from "react";
-import { MdAutoAwesome, MdContactSupport } from "react-icons/md";
-import { PiDevicesFill } from "react-icons/pi";
-import { RiTeamFill } from "react-icons/ri";
-import { SiAwesomelists } from "react-icons/si";
-import HeroSection from "../components/commonInServices/HeroSection";
-import TextSsection from "../components/commonInServices/TextSsection";
-import WhyWe from "../components/commonInServices/WhyWe";
-import LoadingSpinner from "../utils/LoadingSpinner";
-const ServiceProjects = React.lazy(() => import('../components/commonInServices/ServiceProjects'));
-
+import HeroSection from "@/components/commonInServices/HeroSection";
+import TextSsection from "@/components/commonInServices/TextSsection";
+import WhyWe from "@/components/commonInServices/WhyWe";
+import LoadingSpinner from "@/utils/LoadingSpinner";
+const ServiceProjects = React.lazy(() =>
+  import("@/components/commonInServices/ServiceProjects")
+);
+import { FeaturesWeb } from "@/data/features/FeaturesWeb";
 const WebService = () => {
-    const prefix = {ar: 'مذهلًا؟', en:"awesome?"}
-    
-    const features = [
-        {icon:  <SiAwesomelists />, title: "webWhyWe1Title", text:"webWhyWe1Text"},
-        {icon:  <MdAutoAwesome />, title: "webWhyWe2Title", text:"webWhyWe2Text"},
-        {icon:  <PiDevicesFill />, title: "webWhyWe3Title", text:"webWhyWe3Text"},
-        {icon:  <RiTeamFill />, title: "whyWe4Title", text:"whyWe4Text"},
-        {icon:  <MdContactSupport />, title: "whyWe5Title", text:"whyWe5Text"},
-    ];
+  const prefix = { ar: "مذهلًا؟", en: "awesome?" };
+  return (
+    <div className=" containerD flex flex-col gap-28 pt-12">
+      <HeroSection
+        src={"/assets/servicesImgs/webHero.webp"}
+        title={"webHeroTitle"}
+        text={"webHeroText"}
+      />
 
-    return (
-        <div className=" containerD flex flex-col gap-32 pt-12">
-            <HeroSection src={'/assets/images/services/webHero.webp'} title={"webHeroTitle"} text={"webHeroText"} />
-            
-            <WhyWe features={features} />
-            
-            <TextSsection header={"webTextSectionTitle"} p1={"webTextSectionText1"} p2={"webTextSectionText2"} p3={null} prefix={prefix} />
+      <WhyWe features={FeaturesWeb} />
 
-            <Suspense fallback={<div className="w-full h-full bg-gray-100 flex items-center justify-center"><LoadingSpinner />  </div>}>
-                <ServiceProjects />
-            </Suspense>
-        </div>
-    )
-}
+      <TextSsection
+        header={"webTextSectionTitle"}
+        p1={"webTextSectionText1"}
+        p2={"webTextSectionText2"}
+        p3={null}
+        prefix={prefix}
+      />
 
-export default WebService
+      <Suspense
+        fallback={
+          <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+            <LoadingSpinner />{" "}
+          </div>
+        }
+      >
+        <ServiceProjects />
+      </Suspense>
+    </div>
+  );
+};
+
+export default WebService;

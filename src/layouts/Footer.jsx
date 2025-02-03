@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import LazyImage from "../utils/LazyImage";
 import { ourServices } from "@/data/ourServices";
-import { ourContacts } from "@/data/ourContacts";
+import { OurContacts } from "@/data/OurContacts";
 
 function Footer() {
   const { t } = useTranslation();
@@ -30,7 +30,7 @@ function Footer() {
     <div className="footer bg-main-color py-8  sm:py-11">
       <div className="containerD flex justify-between flex-wrap  max-sm:gap-8 max-sm:flex-col max-sm:items-center  sm:gap-10  lg:gap-8   ">
         <LazyImage
-          src="assets/.codeLogo/logoB.webp"
+          src="/assets/.codeLogo/logoB.webp"
           className="w-[180px] h-[180px] my-auto"
           alt=""
           height={"180px"}
@@ -102,7 +102,7 @@ function Footer() {
             {t("footerT3")}
           </li>
           <div className="grid grid-cols-2 gap-4">
-            {ourContacts.map((contact, index) => (
+            {OurContacts.map((contact, index) => (
               <a
                 target="_blank"
                 key={index}

@@ -9,9 +9,9 @@ export const servicesMenu = [
       description: "servDesc2",
       link: "web_services",
     },
-    {
-      title: "servTitle3",
-      description: "servDesc3",
-      link: "mobile_app_services",
-    },
+    // {
+    //   title: "servTitle3",
+    //   description: "servDesc3",
+    //   link: "mobile_app_services",
+    // },
   ];

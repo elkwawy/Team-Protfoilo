@@ -28,7 +28,7 @@ export default function AboutUs() {
     speed: 1000,
     autoplay: true,
     arrows: false,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     lazyLoad: "ondemand",

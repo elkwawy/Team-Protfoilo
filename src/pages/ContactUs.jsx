@@ -8,45 +8,51 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoCallOutline, IoMailOutline, IoPersonOutline } from "react-icons/io5";
 import Toast from "@/components/Toast";
+import LoadingSpinner from "@/utils/LoadingSpinner";
 
 export default function ContactUs() {
-  const [name,setname] = useState("");
-  const [email,setemail] = useState("");
-  const [phone,setphone] = useState("");
-  const [typeOFwebsite,settypeOFwebsite] = useState("");
-  const [message,setmessage] = useState("");
-  const[toast,setToast] = useState(false);
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [phone, setphone] = useState("");
+  const [typeOFwebsite, settypeOFwebsite] = useState("");
+  const [message, setmessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState(false);
   const form = useRef();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
-    .sendForm(
-      'service_k1arj94', // Service ID
-      'template_6115i0q', // Template ID
-      form.current, // Form reference
-      'lVUeayaENlj1rJbVP' // Public Key (User ID)
-    )
-    .then(
-      (result) => {
-        console.log('SUCCESS!', result.text);
-        setname("");     
-        setmessage(""); 
-        setemail(""); 
-        setphone("");
-        settypeOFwebsite("");
-        form.current.reset()
-        setToast(true);
-        setTimeout(() => {
-          setToast(false);
-        },3000);
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-      }
-    );
-};
+      .sendForm(
+        "service_k1arj94", // Service ID
+        "template_6115i0q", // Template ID
+        form.current, // Form reference
+        "lVUeayaENlj1rJbVP" // Public Key (User ID)
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          setname("");
+          setmessage("");
+          setemail("");
+          setphone("");
+          settypeOFwebsite("");
+          form.current.reset();
+          setToast(true);
+          setTimeout(() => {
+            setToast(false);
+          }, 3000);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   return (
     <>
@@ -144,10 +150,8 @@ export default function ContactUs() {
                 <h3 className="text-4xl font-bold text-blue-400 my-6">
                   {t("contactTitle") || "اتصل بنا"}
                 </h3>
-                <p className="text-gray-500 mb-6">
-                  {t("contactDes") }
-                </p>
-                <form className=""  ref={form} onSubmit={sendEmail}>
+                <p className="text-gray-500 mb-6">{t("contactDes")}</p>
+                <form className="" ref={form} onSubmit={sendEmail}>
                   <div className="block md:flex gap-6 ">
                     <div className="flex items-center bg-gray-200 rounded w-full mb-8 px-2">
                       <IoPersonOutline className="text-gray-600 mr-2" />
@@ -189,7 +193,7 @@ export default function ContactUs() {
                         defaultValue=""
                         required
                       >
-                        <option className="" value="" disabled  hidden>
+                        <option className="" value="" disabled hidden>
                           {t("contactLocationType")}
                         </option>
                         <option value="website">{t("website")}</option>
@@ -212,19 +216,22 @@ export default function ContactUs() {
                       required
                     />
                   </div>
-
-                  <button
-                    type="submit"
-                    className="text-white shadow-xl rounded-md w-1/2 block m-auto bg-main-color justify-center py-2 hover:shadow-2xl hover:shadow-blue-400"
-                  >
-                    {t("contactBtn")}
-                  </button>
+                  {loading ? (
+                    <LoadingSpinner />
+                  ) : (
+                    <button
+                      type="submit"
+                      className="text-white shadow-xl rounded-md w-1/2 block m-auto bg-main-color justify-center py-2 hover:shadow-2xl hover:shadow-blue-400"
+                    >
+                      {t("contactBtn")}
+                    </button>
+                  )}
                 </form>
               </div>
             </div>
           </div>
         </div>
- {toast && <Toast/>}
+        {toast && <Toast />}
         <Link
           to={`https://wa.me/${"201147290516"}`}
           className="fixed bottom-16 hover:scale-105 trans right-5 sm:right-8 shadow-3xl scaled"
