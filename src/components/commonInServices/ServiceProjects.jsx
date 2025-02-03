@@ -1,14 +1,28 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { FiLink } from "react-icons/fi";
-import { BiCodeAlt } from "react-icons/bi";
-import { Img } from "react-image";
-import i18n from "@/Languages/i18n";
-import LoadingSpinner from "@/utils/LoadingSpinner";
 import { ourProjects } from "@/data/ourProjects";
+import i18n from "@/Languages/i18n";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { BiCodeAlt } from "react-icons/bi";
+import { FiLink } from "react-icons/fi";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const ServiceProjects = () => {
+const ServiceProjects = ({ourProjects}) => {
   const { t } = useTranslation();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInnerWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   const enterImg = (e) => {
     e.target.style.transform = `translateY(calc(-100% + 256px))`;
   };
@@ -59,18 +73,22 @@ const ServiceProjects = () => {
               </div>
             </div>
             <div className="h-64 w-64 trans overflow-hidden rounded-md border-[1px] ">
-              <Img
+              {innerWidth > 640 &&<LazyLoadImage
                 onMouseEnter={enterImg}
                 onMouseLeave={leaveImg}
                 className=" transition-all duration-[2500ms] w-full"
-                loader={
-                  <div className="my-auto w-full h-64 bg-gray-100 border-[1px] flex items-center justify-center rounded-md">
-                    <LoadingSpinner />
-                  </div>
-                }
+                style={{ transition: "all 1s ease-in-out" }}
                 src={project.pic}
                 alt={project.title}
-              />
+                effect="blur"
+              />}
+              {innerWidth <= 640 && <LazyLoadImage
+                className=" transition-all duration-[2500ms] w-full"
+                style={{ transition: "all 1s ease-in-out" }}
+                src={project.pic}
+                alt={project.title}
+                effect="blur"
+              />}
             </div>
           </div>
         ))}

@@ -1,7 +1,8 @@
 import { t } from "i18next";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import LazyImage from "../utils/LazyImage";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Ourwork() {
   let workDetails = [
@@ -45,14 +46,14 @@ export default function Ourwork() {
             {workDetails.map((work, index) => (
               <div
                 key={index}
-                className="mb-4 rounded-md shadow-lg overflow-hidden border border-gray-100 col-span-12 md:col-span-6 lg:col-span-4 hover:scale-105 duration-300"
+                className="mb-4 rounded-md shadow-lg overflow-hidden border border-gray-100 col-span-12 md:col-span-6 lg:col-span-4  duration-300"
               >
                 <div className="max-h-[300px] overflow-scroll overflow-x-hidden">
-                  <LazyImage
+                  <LazyLoadImage
                     src={work.imageSrc}
                     alt={work.name}
                     className="w-full h-full"
-                    height={"300px"}
+                    effect="blur"
                   />
                 </div>
                 <div className="p-4 bg-white text-center">

@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
-import HeroSection from '../components//Home/HeroSection'
-import Creative from '../components/Home/Creative'
-import OurServices from '../components/Home/OurServices'
-import HowDoWeWork from '../components/Home/HowDoWeWork'
-import Testmonials from '../components/Home/Testmonials'
-import TeamD from "../components/TeamDC";
+import HeroSection from '@/components//Home/HeroSection'
+import Creative from '@/components/Home/Creative'
+import OurServices from '@/components/Home/OurServices'
+import HowDoWeWork from '@/components/Home/HowDoWeWork'
+import Testmonials from '@/components/Home/Testmonials'
 import { useLocation } from 'react-router-dom'
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
             <OurServices />
             <HowDoWeWork />
             <Testmonials />
-            <TeamD />
         </div>
     )
 }
