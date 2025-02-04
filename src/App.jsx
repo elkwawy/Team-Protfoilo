@@ -1,8 +1,8 @@
 import React, { Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Header from "./layouts/Header/Header";
 import LoadingSpinner from "@/utils/LoadingSpinner";
 import ScrollTopBtn from "@/utils/ScrollTopBtn";
+import Header from "./layouts/header/Header";
 const UiUxService = React.lazy(() => import("@/pages/UiUxService"));
 const WebService = React.lazy(() => import("@/pages/WebService"));
 const MobileService = React.lazy(() => import("@/pages/MobileService"));
