@@ -18,6 +18,7 @@ const Application = React.lazy(() => import("@/pages/Services/Application"));
 const Footer = React.lazy(() => import("@/layouts/Footer"));
 
 function App() {
+  
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
