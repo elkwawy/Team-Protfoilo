@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Header from "./layouts/header/Header";
+import Header from "./layouts/Header/Header";
 import LoadingSpinner from "@/utils/LoadingSpinner";
 import ScrollTopBtn from "@/utils/ScrollTopBtn";
 const UiUxService = React.lazy(() => import("@/pages/UiUxService"));
