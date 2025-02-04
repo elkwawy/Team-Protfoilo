@@ -12,7 +12,7 @@ const Ourwork = React.lazy(() => import("@/pages/Ourwork"));
 const ContactUs = React.lazy(() => import("@/pages/ContactUs"));
 const Home = React.lazy(() => import("@/pages/Home"));
 const DailyOffer = React.lazy(() => import("@/components/DailyOffer"));
-const Services = React.lazy(() => import("@/pages/Services/UiUx"));
+const UiUx = React.lazy(() => import("@/pages/Services/UiUx"));
 const Web = React.lazy(() => import("@/pages/Services/Web"));
 const Application = React.lazy(() => import("@/pages/Services/Application"));
 const Footer = React.lazy(() => import("@/layouts/Footer"));
@@ -42,7 +42,7 @@ function App() {
           <Route path="/steps" element={<Steps />} />
           <Route path="/ourWork" element={<Ourwork />} />
           <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/services/uiux_services" element={<Services />}></Route>
+          <Route path="/services/uiux_services" element={<UiUx />}></Route>
           <Route path="/services/web_services" element={<Web />}></Route>
           <Route
             path="/services/mobile_app_services"

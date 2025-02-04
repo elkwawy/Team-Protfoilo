@@ -39,11 +39,6 @@ export const teamMembers = [
     role: "Project Manager",
     imageUrl: "assets/teamMembers/PM.webp",
   },
-  {
-    nameKey: "FED3",
-    role: "Frontend Developer",
-    imageUrl: "assets/teamMembers/FED3.webp",
-  },
   // {
   //   nameKey: "FLD1",
   //   role: "Flutter Developer",

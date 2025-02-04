@@ -1,9 +1,14 @@
 import LoadingSpinner from "@/utils/LoadingSpinner";
-import uibanner from "assets/servicesImgs/uibanner.webp";
+import uibanner from "/assets/servicesImgs/uibanner.webp";
 import React, { Suspense } from "react";
+import HeroSection from "@/components/Services/HeroSection";
+import WhyWe from "@/components/commonInServices/WhyWe";
+import { FeaturesUiUx } from "@/data/features/FeaturesUiUx";
+import TextSsection from "@/components/commonInServices/TextSsection";
+import FaqSection from "@/components/Services/FaqSection";
 const ServiceProjects = React.lazy(() => import('@/components/commonInServices/ServiceProjects'));
-
-function Services() {
+import { ourProjects } from "@/data/ourProjects";
+function UiUx() {
 
   const prefix = { ar: "الحدود؟", en: "level?" };
 
@@ -56,7 +61,7 @@ function Services() {
               </div>
             }
           >
-            <ServiceProjects />
+            <ServiceProjects ourProjects={ourProjects} />
           </Suspense>
         </div>
         
@@ -66,4 +71,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default UiUx;

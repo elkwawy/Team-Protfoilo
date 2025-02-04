@@ -1,4 +1,3 @@
-import { ourProjects } from "@/data/ourProjects";
 import i18n from "@/Languages/i18n";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
