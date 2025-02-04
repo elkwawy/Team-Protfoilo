@@ -1,8 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import LazyImage from "../utils/LazyImage";
+import { OurContacts } from "@/data/OurContacts";
 import { ourServices } from "@/data/ourServices";
-import { OurContacts } from "@/data/ourContacts";
+
 
 function Footer() {
   const { t } = useTranslation();
