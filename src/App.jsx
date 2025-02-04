@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Header from "@/layouts/header/Header";
+import Header from "./layouts/header/Header";
 import LoadingSpinner from "@/utils/LoadingSpinner";
 import ScrollTopBtn from "@/utils/ScrollTopBtn";
 const UiUxService = React.lazy(() => import("@/pages/UiUxService"));
@@ -18,7 +18,6 @@ const Application = React.lazy(() => import("@/pages/Services/Application"));
 const Footer = React.lazy(() => import("@/layouts/Footer"));
 
 function App() {
-  
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
