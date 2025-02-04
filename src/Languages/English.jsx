@@ -1,7 +1,4 @@
-import { t } from "i18next";
-
 export const English = {
-  test: "Hello Ahmed",
   // Header
   navLi1: "Home",
   navLi2: "Services",
@@ -19,7 +16,7 @@ export const English = {
     "We take care of every detail in the design and programming of websites, to provide integrated technical solutions that support your vision and achieve your goals effectively.",
   servDesc3:
     "When a user starts their journey with your app, the experience should be inspiring and seamless from the first moment.",
-  // home page
+  /* Home page */
   //heroSec
   heroMainTitle:
     "Bring your dream project to life with our expert help in web and app Dev.",
@@ -346,8 +343,8 @@ export const English = {
   servTitleSection3h4: "Application Test",
   servTitleSection3p4:
     "Complete testing of the application is done to ensure that the mobile application runs properly on devices such as testing functionality, performance, security.",
-  
-    //Frequently Asked Questions
+
+  //Frequently Asked Questions
   Faq: "Frequently Asked Questions",
   // UI/UX FAQ
   faqQuestionUiUx1: "Why does my project need a professional UI/UX design?",
