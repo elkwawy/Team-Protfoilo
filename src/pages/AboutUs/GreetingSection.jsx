@@ -1,6 +1,5 @@
+import LazyImage from "@/utils/LazyImage";
 import { useTranslation } from "react-i18next";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const GreetingSection = () => {
@@ -20,14 +19,11 @@ const GreetingSection = () => {
                 </div>
                 
             <div className=" w-[80%] sm:w-1/2 mx-auto   ">
-                <LazyLoadImage
+                <LazyImage
                     src="/assets/aboutUs/aboutUs-img2.webp"
                     alt="About Us"
-                    effect={"blur"}
-                    loading="lazy"
-                    width={"100%"}
-                    // loader={<div className="w-full h-[350px] bg-gray-200 animate-pulse rounded-lg" />}
-                    className={`w-full max-h-[350px]  rounded-lg object-cover transition-opacity duration-500`}
+                    parent={`h-[350px] w-full rounded-lg`}
+                    className={`w-full h-full rounded-lg trans`}
                 />
             </div>
         </>

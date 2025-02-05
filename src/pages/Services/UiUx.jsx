@@ -1,13 +1,9 @@
-import LoadingSpinner from "@/utils/LoadingSpinner";
-import uibanner from "/assets/servicesImgs/uibanner.webp";
-import React, { Suspense } from "react";
-import HeroSection from "@/components/Services/HeroSection";
-import WhyWe from "@/components/commonInServices/WhyWe";
-import { FeaturesUiUx } from "@/data/features/FeaturesUiUx";
 import TextSsection from "@/components/commonInServices/TextSsection";
+import WhyWe from "@/components/commonInServices/WhyWe";
 import FaqSection from "@/components/Services/FaqSection";
-const ServiceProjects = React.lazy(() => import('@/components/commonInServices/ServiceProjects'));
-import { ourProjects } from "@/data/ourProjects";
+import HeroSection from "@/components/Services/HeroSection";
+import { FeaturesUiUx } from "@/data/features/FeaturesUiUx";
+import uibanner from "/assets/servicesImgs/uibanner.webp";
 function UiUx() {
 
   const prefix = { ar: "الحدود؟", en: "level?" };
@@ -52,19 +48,6 @@ function UiUx() {
           p3={"uiuxTextSectionText3"}
           prefix={prefix}
         />
-
-        <div>
-          <Suspense
-            fallback={
-              <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                <LoadingSpinner />{" "}
-              </div>
-            }
-          >
-            <ServiceProjects ourProjects={ourProjects} />
-          </Suspense>
-        </div>
-        
         <FaqSection faqList={faqList} />
       </div>
     </section>

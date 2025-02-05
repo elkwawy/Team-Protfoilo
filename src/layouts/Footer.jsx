@@ -32,9 +32,9 @@ function Footer() {
       <div className="containerD flex justify-between flex-wrap  max-sm:gap-8 max-sm:flex-col max-sm:items-center  sm:gap-10  lg:gap-8   ">
         <LazyImage
           src="/assets/.codeLogo/logoB.webp"
-          className="w-[180px] h-[180px] my-auto"
+          parent={`h-[180px] w-[180px] rounded-md`}
+          className="w-full h-full my-auto"
           alt=""
-          height={"180px"}
         />
 
         <ul className="space-y-2 text-center">

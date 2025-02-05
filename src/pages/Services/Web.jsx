@@ -4,15 +4,17 @@ import webbanner from "/assets/servicesImgs/webbanner.webp";
 import { FaArrowRightLong } from "react-icons/fa6";
 import ServiceItems from "@/components/ServiceItems";
 import { FaQuestionCircle } from "react-icons/fa";
+import LazyImage from "@/utils/LazyImage";
 const Web = () => {
   return (
     <section className="bg-white">
       <div className="gap-16 items-center mb-10 ">
-        <div className="relative font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
-          <div className="absolute inset-0">
-            <img
+        <div className="relative  h-[360px] sm:h-[500px] font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
+          <div className="absolute inset-0 ">
+            <LazyImage
               src={webbanner}
               alt="Background Image"
+              parent={`h-[360px] sm:h-[500px]`}
               className="object-cover object-center w-full h-full"
             />
             <div className="absolute inset-0 bg-black opacity-50"></div>

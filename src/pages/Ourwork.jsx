@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import LazyImage from "@/utils/LazyImage";
 
 export default function Ourwork() {
   let workDetails = [
@@ -49,9 +50,10 @@ export default function Ourwork() {
                 className="mb-4 rounded-md shadow-lg overflow-hidden border border-gray-100 col-span-12 md:col-span-6 lg:col-span-4  duration-300"
               >
                 <div className="max-h-[300px] overflow-scroll overflow-x-hidden">
-                  <LazyLoadImage
+                  <LazyImage
                     src={work.imageSrc}
                     alt={work.name}
+                    parent={`w-full min-h-[300px] bg-gray-200`}
                     className="w-full h-full"
                     effect="blur"
                   />

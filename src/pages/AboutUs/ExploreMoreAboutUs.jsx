@@ -1,6 +1,5 @@
+import LazyImage from "@/utils/LazyImage";
 import { useTranslation } from "react-i18next";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const ExploreMoreAboutUs = () => {
@@ -16,12 +15,11 @@ const ExploreMoreAboutUs = () => {
                     <p className="text-[18px]">{t("knowUsP2")}</p>
                 </div>
 
-                <div className="max-h-[400px]  md:h-full flex items-center justify-center col-span-12 md:col-span-12 lg:col-span-4">
-                    <LazyLoadImage
-                        effect="blur"
+                <div className="max-lg:mx-auto w-full sm:w-3/4 lg:w-full max-h-[400px]  md:h-full flex items-center justify-center col-span-12 md:col-span-12 lg:col-span-4">
+                    <LazyImage
+                        parent={`w-full rounded h-[250px] sm:h-[400px]`}
                         src="assets/aboutUs/aboutUs-img1.webp"
                         alt="Explore more about us"
-                        height={"100%"}
                         className="mx-auto h-full rounded my-auto object-cover"
                     />
                 </div>

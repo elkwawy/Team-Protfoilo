@@ -3,6 +3,7 @@
 @tailwind utilities;
 :root {
   --main-color: #68bbff;
+  /* --main-color: #d6ecfd; */
   --hover-main-color: #51a8ff;
   --frist-color: #3995ff;
   --thrid-color: #449eff;

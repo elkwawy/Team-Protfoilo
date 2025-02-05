@@ -6,6 +6,7 @@ import LanguageSelector from "./components/LanguageSelector";
 import BtnContactUs from "./components/BtnContactUs";
 import NavMenu from "./components/NavMenu";
 import BtnMenu from "./components/BtnMenu";
+import LazyImage from "@/utils/LazyImage";
 const Header = () => {
   const [selectedLanguage, setSelectedLanguage] = useState(
     (localStorage.length > 0 && localStorage.getItem("lng")) || "ar"
@@ -19,11 +20,12 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center  ">
           <Link to="/">
-            <Img
+            <LazyImage
               src="/assets/.codeLogo/logo.webp"
-              alt=""
-              className={`h-14 ${selectedLanguage === "ar" ? "ml-6" : ""}`}
-              loader={<LoadingSpinner />}
+              alt="DotCode"
+              parent={`w-14 h-14`}
+              className={`w-full h-full ${selectedLanguage === "ar" ? "ml-6" : ""}`}
+              // loader={<LoadingSpinner />}
             />
           </Link>
         </div>

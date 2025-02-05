@@ -1,8 +1,8 @@
 import i18n from '@/Languages/i18n';
+import LazyImage from '@/utils/LazyImage';
 import { useTranslation } from 'react-i18next';
 import { MdArrowForward } from 'react-icons/md';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Img } from 'react-image';
 import { Link } from 'react-router-dom';
 
 
@@ -20,7 +20,11 @@ const Creative = () => {
                 </Link>
             </div>
 
-            <LazyLoadImage src={'assets/home/creative.webp'} className='w-64 min-[450px]:min-w-80 lg:min-w-96' effect='blur'/>
+            <Img 
+                src={'assets/home/creative.webp'} 
+                alt='creative'
+                className='w-64 min-[450px]:min-w-80 lg:min-w-96'
+            />
         </div>
     )
 }

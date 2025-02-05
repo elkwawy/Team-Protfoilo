@@ -6,16 +6,17 @@ const HeroSection = ({ src, title, desc }) => {
   const { t } = useTranslation();
   return (
     <div className="gap-16 items-center">
-      <div className="relative font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
-        <div className="absolute inset-0 h-[360px] sm:h-[300px]">
+      <div className="relative  h-[360px] sm:h-[500px] font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
+        <div className="absolute inset-0 ">
           <LazyImage
             src={src}
             alt="Background Image"
+            parent={`h-[360px] sm:h-[500px]`}
             className="object-cover object-center w-full h-full"
-            height="300px"
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
+
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">
             {t(title)}
@@ -30,6 +31,7 @@ const HeroSection = ({ src, title, desc }) => {
             <MdRocketLaunch className="hidden text-lg group-hover:block" />
           </Link>
         </div>
+
       </div>
     </div>
   );
