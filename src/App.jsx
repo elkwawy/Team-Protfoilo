@@ -6,7 +6,7 @@ import Header from "@/layouts/header/Header";
 const UiUxService = React.lazy(() => import("@/pages/UiUxService"));
 const WebService = React.lazy(() => import("@/pages/WebService"));
 const MobileService = React.lazy(() => import("@/pages/MobileService"));
-const AboutUs = React.lazy(() => import("@/pages/AboutUs"));
+const AboutUs = React.lazy(() => import("@/pages/AboutUs")); 
 const Steps = React.lazy(() => import("@/pages/Steps"));
 const Ourwork = React.lazy(() => import("@/pages/Ourwork"));
 const ContactUs = React.lazy(() => import("@/pages/ContactUs"));

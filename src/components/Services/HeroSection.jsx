@@ -7,12 +7,12 @@ const HeroSection = ({ src, title, desc }) => {
   return (
     <div className="gap-16 items-center">
       <div className="relative font-light py-20 flex flex-col justify-center items-center text-gray-500 sm:text-lg">
-        <div className="absolute inset-0 h-[360px] sm:h-[300px]">
+        <div className="absolute inset-0 h-[360px] sm:h-[400px]">
           <LazyImage
             src={src}
             alt="Background Image"
             className="object-cover object-center w-full h-full"
-            height="300px"
+            height="400px"
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>

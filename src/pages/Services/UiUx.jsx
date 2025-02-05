@@ -42,7 +42,7 @@ function UiUx() {
     <section className="space-y-2">
       <HeroSection src={uibanner} title="servTitle1" desc="servDesc1" />
 
-      <div className="containerD flex flex-col gap-28 pt-12">
+      <div className="containerD flex flex-col gap-28 pt-36">
         <WhyWe features={FeaturesUiUx} />
 
         <TextSsection
@@ -53,17 +53,7 @@ function UiUx() {
           prefix={prefix}
         />
 
-        <div>
-          <Suspense
-            fallback={
-              <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                <LoadingSpinner />{" "}
-              </div>
-            }
-          >
-            <ServiceProjects ourProjects={ourProjects} />
-          </Suspense>
-        </div>
+   
         
         <FaqSection faqList={faqList} />
       </div>
