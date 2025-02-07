@@ -67,7 +67,7 @@ const Header = () => {
             : "max-h-0 opacity-0 overflow-hidden"
         } absolute top-[57px] w-full bg-white z-50`}
       >
-        <div className="flex flex-col max-[900px]:mt-2 max-[900px]:pt-3 max-[900px]:border-y shadow gap-2 items-center justify-center">
+        <div className="flex flex-col max-[900px]:mt-2 max-[900px]:pt-3 max-[900px]:border-t shadow gap-2 items-center justify-center">
           <NavMenu
             selectedLanguage={selectedLanguage}
             setIsMenuOpen={setIsMenuOpen}

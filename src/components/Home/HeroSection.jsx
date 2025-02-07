@@ -16,7 +16,7 @@ const HeroSection = () => {
   return (
     
     <div className='flex relative -z-0 overflow-hidden flex-col items-center justify-center gap-10 w-full h-[calc(100vh-72px)] '>
-        <div className='flex flex-col z-30 gap-10 mx-auto mt-[-2.5rem] w-[85%] sm:w-2/3 md:w-1/2'>
+        <div className='flex flex-col z-30 gap-10 mx-auto mt-[-3rem] w-[85%] sm:w-2/3 md:w-1/2'>
             
             <FaCode className={`text-5xl -mb-10 min-[1286px]:hidden text-main-color mx-auto `} />
             <p className='text-xl inline-block leading-none lead relative p-0 m-0 min-[288px]:text-3xl sm:text-4xl text-center lg:text-6xl lg:leading-tight font-bold '>
