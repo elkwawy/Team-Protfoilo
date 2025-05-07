@@ -278,14 +278,14 @@ export const English = {
     "Case studies highlighting our successful and innovative digital solutions.",
   ourworkP1:
     "Examples of our work with leading brands, growing companies, and venture-backed startups.",
-  projectName: "name",
-  projTitl: "E-commerce Store",
-  projDec1:
-    "Your ultimate destination for online shopping! We offer a wide variety of high-quality products, ranging from fashion and accessories to electronics and home appliances. Our store provides a seamless and convenient shopping experience, allowing you to easily browse products, add items to your cart, and complete the checkout process securely and quickly.",
-  projTit2: "Online Store",
-  projDec2:
-    "Your ideal destination for shopping online! We offer a wide range of high-quality products, from fashion and accessories to electronics and home tools. Our store features an easy and convenient shopping experience, allowing you to browse products effortlessly, add items to your cart, and complete the payment process safely and quickly.",
-
+    projectName: "name",
+    projTitl: "Style Club",
+    projDec1:
+      "Your ideal destination for online shopping! We offer a wide variety of high-quality products, from fashion to accessories. Our store features an easy and comfortable shopping experience, where you can browse, add to cart, and checkout quickly and securely.",
+    projTit2: "Dashboard",
+    projDec2:
+      "A responsive and user-friendly admin dashboard for managing an e-commerce store, enabling admins to easily manage products, orders, and users. It is equipped with a secure login system and effective sales analytics, and provides a simple user interface that makes navigation between sections easy.",
+  
   // contact with us
 
   contactTitl: "Contact Us",

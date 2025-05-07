@@ -1,27 +1,17 @@
-import { t } from "i18next";
-import React, { useEffect } from "react";
+
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import LazyImage from "@/utils/LazyImage";
+import { useTranslation } from "react-i18next";
 
 export default function Ourwork() {
+  const { t } = useTranslation();
   let workDetails = [
-    {
-      name: t("projTitl"),
-      tittle: t("projDec1"),
-      imageSrc: "assets/ourProjects/project2.webp",
-    },
-    {
-      name: t("projTit2"),
-      tittle: t("projDec2"),
-      imageSrc: "assets/ourProjects/GYM2.webp",
-    },
-    {
-      name: t("projTit2"),
-      tittle: t("projDec2"),
-      imageSrc: "assets/ourProjects/Honey2.webp",
-    },
+    { name: t("projTitl"), tittle: t("projDec1"), imageSrc: "../assets/projects/style-club-fashion.vercel.app_ (2).png",link:"https://style-club-fashion.vercel.app/" },
+    { name: t("projTit2"), tittle: t("projDec2"), imageSrc: "../assets/projects/localhost_5174_dashboard (2).png",link:"#" },
+   
   ];
 
   const preloadImages = (images) => {
@@ -53,8 +43,8 @@ export default function Ourwork() {
                   <LazyImage
                     src={work.imageSrc}
                     alt={work.name}
-                    parent={`w-full min-h-[300px] bg-gray-200`}
-                    className="w-full h-full"
+                    parent={`w-full min-h-[300px] `}
+                    className="w-full h-full min-h-[300px] object-contain"
                     effect="blur"
                   />
                 </div>
@@ -67,7 +57,7 @@ export default function Ourwork() {
                   </h3>
                   <p className="text-gray-500 mb-6">{work.tittle}</p>
                   <Link
-                    to="#"
+                    to={work.link}
                     className="shadow-xl rounded-md bg-main-color justify-center py-1 w-1/2 md:w-[40%] text-center inline-block m-auto hover:bg-hover-main-color text-white"
                   >
                     {t("ourworkBtn")}
