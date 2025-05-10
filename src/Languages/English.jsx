@@ -285,7 +285,9 @@ export const English = {
     projTit2: "Dashboard",
     projDec2:
       "A responsive and user-friendly admin dashboard for managing an e-commerce store, enabling admins to easily manage products, orders, and users. It is equipped with a secure login system and effective sales analytics, and provides a simple user interface that makes navigation between sections easy.",
-  
+       projTit3:"Dot Code ",
+  projDec3: "Dot Code Portfolio showcases the team's work professionally. Developed with React and Tailwind for a fast, responsive design. Highlights the team's technical identity and offers an engaging experience. Used as a digital card for professional opportunities. Displays the team's skills in an organized and modern way.",
+
   // contact with us
 
   contactTitl: "Contact Us",

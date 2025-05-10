@@ -10,7 +10,10 @@ export default function Ourwork() {
   const { t } = useTranslation();
   let workDetails = [
     { name: t("projTitl"), tittle: t("projDec1"), imageSrc: "../assets/projects/style-club-fashion.vercel.app_ (2).png",link:"https://style-club-fashion.vercel.app/" },
-    { name: t("projTit2"), tittle: t("projDec2"), imageSrc: "../assets/projects/localhost_5174_dashboard (2).png",link:"#" },
+
+    { name: t("projTit2"), tittle: t("projDec2"),
+       imageSrc: "../assets/projects/localhost_5174_dashboard (2).png",link:"https://style-club-dashboard.vercel.app" },
+       { name: t("projTit3"), tittle: t("projDec3"), imageSrc: "../assets/projects/localhost_5175_ (1).png",link:"https://dot-code.vercel.app/" },
    
   ];
 
